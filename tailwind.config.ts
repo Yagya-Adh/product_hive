@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        productHives: {
+          mainBackground: "#102c24",
+          buttonColor: "#46e696",
+        },
       },
     },
   },
