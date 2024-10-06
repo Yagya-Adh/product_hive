@@ -2,13 +2,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import logoImage from "../../assets/homeLogo.svg";
+import navLogoImage from "../../assets/homeLogo.svg";
+import footerLogoImage from "../../assets/footerLogo.svg";
 
-const MainLogo = () => {
+interface IPropFooter {
+  logo?: string | "footer" | "nav";
+}
+
+const MainLogo = ({ logo }: IPropFooter) => {
+  if (logo == "footer") {
+    return (
+      <div className="flex items-center">
+        <Link href="/">
+          <Image src={footerLogoImage} alt="home_logo" className="" />
+        </Link>
+      </div>
+    );
+  }
+
+  if (logo == "nav") {
+    return (
+      <div className="flex items-center">
+        <Link href="/">
+          <Image src={navLogoImage} alt="home_logo" className="" />
+        </Link>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center">
       <Link href="/">
-        <Image src={logoImage} alt="home_logo" className="" />
+        <Image src={navLogoImage} alt="home_logo" className="" />
       </Link>
     </div>
   );

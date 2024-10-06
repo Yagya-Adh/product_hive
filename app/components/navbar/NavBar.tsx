@@ -4,6 +4,7 @@ import ButtonPills from "../button/ButtonPills";
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Modal from "../modal/Modal";
 import MainLogo from "../mainLogo/MainLogo";
+import Link from "next/link";
 
 interface Iroutes {
   id: number;
@@ -26,23 +27,25 @@ const NavBar = () => {
 
   return (
     <div className="bg-productHives-mainBackground pt-10 pb-40">
-      <nav className="max-w-screen-2xl mx-auto px-10 relative">
+      <nav className="max-w-screen-2xl mx-auto px-5 relative">
         <div className="rounded-full z-10 border border-green-800 shadow-2xl flex justify-between items-center py-1 px-10 bg-transparent">
-          <MainLogo />
+          <MainLogo logo="nav" />
 
-          <div className="flex justify-between items-center bg-transparent py-8">
-            {routes?.map((linkList) => (
-              <ul className="flex text-2xl items-center" key={linkList.id}>
-                <li className="text-white mx-8">{linkList.name}</li>
-              </ul>
-            ))}
+          <div className="flex justify-between items-center bg-transparent py-3">
+            <ul className="hidden lg:flex text-2xl items-center">
+              {routes?.map((linkList) => (
+                <li className="text-white mx-8" key={linkList.id}>
+                  <Link href={linkList.path}>{linkList.name}</Link>
+                </li>
+              ))}
+            </ul>
             <ButtonPills text="Buy Template" />
 
             <span className="text-2xl text-white" onClick={handelCartOpen}>
               Cart (0 )
             </span>
 
-            <Bars3Icon className="size-10 text-green-700 " />
+            <Bars3Icon className="size-10 text-green-700 lg:hidden" />
           </div>
         </div>
       </nav>

@@ -14,6 +14,8 @@ const config: Config = {
         productHives: {
           mainBackground: "#102c24",
           buttonColor: "#46e696",
+          colorGrey: "#f9f8f3",
+          lightYellow: "#efebe0",
         },
       },
     },
