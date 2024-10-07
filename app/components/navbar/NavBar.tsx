@@ -26,7 +26,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="bg-productHives-mainBackground pt-10 pb-40">
+    <div className="">
       <nav className="max-w-screen-2xl mx-auto px-5 relative">
         <div className="rounded-full z-10 border border-green-800 shadow-2xl flex justify-between items-center py-1 px-10 bg-transparent">
           <MainLogo logo="nav" />

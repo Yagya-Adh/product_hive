@@ -3,7 +3,7 @@ import MainBainner from "./assets/banner/MainBainner";
 export default function Home() {
   return (
     <>
-      <div className="bg-productHives-buttonColor">
+      <div className="bg-productHives-mainBackground pt-10 pb-40">
         <MainBainner />
         <div className="mx-auto max-w-screen-2xl px-10 relative ">
           <BannerCard />

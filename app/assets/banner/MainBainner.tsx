@@ -5,7 +5,7 @@ import React from "react";
 
 const MainBainner = () => {
   return (
-    <div>
+    <div className="bg-productHives-mainBackground pt-10 pb-40">
       <NavBar />
     </div>
   );
