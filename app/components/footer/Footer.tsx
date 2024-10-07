@@ -62,13 +62,13 @@ interface Icommon {
 interface Isocial {
   id: number;
   mean: StaticImageData;
-  common: Icommon[];
 }
 
 interface IcartData {
   id: number;
   title: string;
   social: Isocial[];
+  common: Icommon[];
 }
 const cardData: IcartData = [
   {
@@ -103,26 +103,40 @@ export default Footer;
 
 const Card = () => {
   return (
-    <div className="rounded-xl overflow-hidden p-10 bg-productHives-lightYellow  relative z-30">
-      <div className="flex items-center flex-col">
-        {cardData?.map((cardItem) => (
-          <div key={cardItem.id}>
-            <h1 className="text-3xl font-bold">{cardItem.title}</h1>
-            <div className="flex flex-col justify-center py-10">
-              {cardItem.common?.map((iconList) => (
+    <div className="rounded-xl overflow-hidden bg-productHives-lightYellow  relative z-30">
+      <div className="flex justify-between relative">
+        <div className="bg-productHives-buttonColor rounded-full absolute -top-10 -right-10 h-2/3 w-1/3 -z-10"></div>
+        <div>
+          {cardData?.map((cardItem) => (
+            <div key={cardItem.id} className="flex flex-col p-10">
+              <h1 className="text-3xl font-bold">{cardItem.title}</h1>
+              {cardItem.common?.map((commonList) => (
                 <div
-                  className="flex items-center text-3xl py-5"
-                  key={iconList.id}
+                  className="flex items-center text-xl p-1"
+                  key={commonList.id}
                 >
-                  <Image src={iconList.icon} alt="icons_" className="size-7" />
-                  <p>{iconList.text}</p>
+                  <Image
+                    src={commonList.icon}
+                    alt="icons_"
+                    className="size-7 inset-0 z-10"
+                  />
+                  <p className="p-1">{commonList.text}</p>
                 </div>
               ))}
+              <div className="flex justify-between">
+                {cardItem.social?.map((socialList) => (
+                  <Image
+                    src={socialList.mean}
+                    key={socialList.id}
+                    alt="social_"
+                    className="size-8"
+                  />
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
         <Image src={letsTalkImage} alt="card_image_" className="z-20" />
-        <div className="bg-productHives-buttonColor rounded-full absolute -top-1 -right-1  w-1/2 h-2/3 -z-10"></div>
       </div>
     </div>
   );
@@ -133,12 +147,11 @@ const FooterGridSection = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 py-5">
       <div className="flex flex-col">
         <Card />
-
-        <ButtonPills text="Buy Template" />
+        <div>
+          <ButtonPills text="Buy Template" />
+        </div>
       </div>
-      <div>
-        <FooterSectionTwo />
-      </div>
+      <FooterSectionTwo />
     </div>
   );
 };
