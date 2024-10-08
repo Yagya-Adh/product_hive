@@ -31,17 +31,30 @@ const NavBar = () => {
         <div className="rounded-full z-10 border border-green-800 shadow-2xl flex justify-between items-center py-1 px-10 bg-transparent">
           <MainLogo logo="nav" />
 
-          <div className="flex justify-between items-center bg-transparent py-3">
-            <ul className="hidden lg:flex text-2xl items-center">
+          <div className="flex justify-between items-center bg-transparent py-1">
+            <ul className="hidden lg:flex text-2xl items-center p-1">
               {routes?.map((linkList) => (
                 <li className="text-white mx-8" key={linkList.id}>
                   <Link href={linkList.path}>{linkList.name}</Link>
                 </li>
               ))}
-            </ul>
-            <ButtonPills text="Buy Template" />
 
-            <span className="text-2xl text-white" onClick={handelCartOpen}>
+              <div className=" flex items-center justify-between">
+                <button
+                  className="text-2xl text-white"
+                  onClick={handelCartOpen}
+                >
+                  Cart (0 )
+                </button>
+
+                <ButtonPills text="Buy Template " />
+              </div>
+            </ul>
+
+            <span
+              className="text-2xl text-white lg:hidden"
+              onClick={handelCartOpen}
+            >
               Cart (0 )
             </span>
 
