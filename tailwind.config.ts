@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import ProductOwner from "./app/components/banner/ProductOwner";
 
 const config: Config = {
   content: [
@@ -16,6 +17,7 @@ const config: Config = {
           buttonColor: "#46e696",
           colorGrey: "#f9f8f3",
           lightYellow: "#efebe0",
+          ProductOwner: "#f9f8f3",
         },
       },
     },
