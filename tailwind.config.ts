@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import ProductOwner from "./app/components/banner/ProductOwner";
 
 const config: Config = {
   content: [
@@ -19,6 +18,10 @@ const config: Config = {
           lightYellow: "#efebe0",
           ProductOwner: "#f9f8f3",
         },
+      },
+      backgroundImage: {
+        "hero-pattern":
+          "url('https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/661e2e6d3fc9207de83f3144_heading-background-element.svg')",
       },
     },
   },

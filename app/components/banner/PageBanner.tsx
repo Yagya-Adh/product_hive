@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import ButtonPills from "@/app/components/button/ButtonPills";
-import personOne from "@/app/assets/home/hero.webp";
-import personTwo from "@/app/assets/home/heroin.webp";
+import personOne from "@/app/assets/images/home/hero.webp";
+import personTwo from "@/app/assets/images/home/heroin.webp";
 
 const PageBanner = () => {
   return (
@@ -17,12 +17,12 @@ const PageBanner = () => {
         </div>
 
         <div className="flex flex-col items-center md:text-center  justify-center">
-          <h1 className="md:max-w-screen-96 s p-10 text-4xl lg:text-6xl md:text-center font-semibold max-w-screen-xl   capitalize">
+          <p className="md:max-w-screen-96 s p-10 text-4xl lg:text-6xl md:text-center font-semibold max-w-screen-xl   capitalize">
             The customer engagement platform for <br />
-            <span className="text-productHives-buttonColor">
-              Every small business
-            </span>
-          </h1>
+            <p className="text-productHives-buttonColor">
+              Every small business <span className=""></span>
+            </p>
+          </p>
 
           <p>
             Boost Your Business with ProductHive - The Ultimate Customer

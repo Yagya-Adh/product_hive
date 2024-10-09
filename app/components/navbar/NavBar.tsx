@@ -46,8 +46,9 @@ const NavBar = () => {
                 >
                   Cart (0 )
                 </button>
-
-                <ButtonPills text="Buy Template " />
+                <div className="hidden lg:flex">
+                  <ButtonPills text="Buy Template " />
+                </div>
               </div>
             </ul>
 

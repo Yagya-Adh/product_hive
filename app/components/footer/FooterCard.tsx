@@ -1,15 +1,15 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import letsTalkImage from "../../assets/footer/talk.webp";
-import facebook from "../../assets/social/facebook.svg";
-import xsvgLogo from "../../assets/social/x-social.svg";
-import linkedin from "../../assets/social/linkedin.svg";
-import instagram from "../../assets/social/instagram.svg";
+import letsTalkImage from "../../assets/images/footer/talk.webp";
+import facebook from "../../assets/images/social/facebook.svg";
+import xsvgLogo from "../../assets/images/social/x-social.svg";
+import linkedin from "../../assets/images/social/linkedin.svg";
+import instagram from "../../assets/images/social/instagram.svg";
 
-import messageIcon from "../../assets/icons/message.svg";
-import callIcon from "../../assets/icons/call.svg";
-import dropIcon from "../../assets/icons/drop.svg";
+import messageIcon from "../../assets/images/icons/message.svg";
+import callIcon from "../../assets/images/icons/call.svg";
+import dropIcon from "../../assets/images/icons/drop.svg";
 
 interface Icommon {
   id: number;

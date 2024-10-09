@@ -1,8 +1,8 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import defineVision from "@/app/assets/product_owner/define.svg";
-import customerSatisfraction from "@/app/assets/product_owner/customer.svg";
-import measureSuccess from "@/app/assets/product_owner/measure.svg";
+import defineVision from "@/app/assets/images/product_owner/define.svg";
+import customerSatisfraction from "@/app/assets/images/product_owner/customer.svg";
+import measureSuccess from "@/app/assets/images/product_owner/measure.svg";
 
 interface IProductOwnerData {
   id: number;
