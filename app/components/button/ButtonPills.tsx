@@ -11,7 +11,7 @@ const ButtonPills = ({ text, variant, padding }: IPillButtonProps) => {
       {variant == "button-outline" ? (
         <button
           className={` relative rounded-full py-1 ${padding ? padding : ""} 
-          text-productHives-buttonColor hover:text-black
+          text-productHives-buttonColor hover:text-productHives-TextSecondary
           mx-2 border border-productHives-buttonColor bg-transparent  hover:bg-productHives-buttonColor items-center text-2xl font-bold cursor-pointer overflow-hidden transition-transform duration-300 ease-in-out group`}
         >
           <div className="overflow-hidden flex flex-col items-center group">

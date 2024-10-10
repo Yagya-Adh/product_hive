@@ -1,5 +1,6 @@
 "use client";
 import CustomTextBanner from "../banner/CustomTextBanner";
+import SliderCard from "../card/SliderCard";
 
 const Revenue = () => {
   return (
@@ -9,6 +10,9 @@ const Revenue = () => {
           preText="Revenue enablement that"
           highlightText="customers love"
         />
+        <div>
+          <SliderCard />
+        </div>
       </div>
     </div>
   );
