@@ -40,10 +40,10 @@ const productData = [
 ];
 const ProductManagement = () => {
   return (
-    <div className="bg-productHives-mainBackground lg:py-20 py-10">
-      <div className="mx-auto max-w-screen-2xl px-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
-          <h1 className="text-5xl text-white">
+    <div className="bg-productHives-mainBackground ">
+      <div className="mx-auto max-w-screen-2xl px-5 py-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10  py-20 px-10 items-center">
+          <h1 className="text-6xl text-white">
             Why you should choose our{" "}
             <span className="text-productHives-buttonColor">
               Product Management{" "}
