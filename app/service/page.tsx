@@ -1,9 +1,14 @@
 "use client";
 
 import React from "react";
+import MainBainner from "../components/banner/MainBainner";
 
 const ServicePage = () => {
-  return <div>Service Page</div>;
+  return (
+    <div>
+      <MainBainner variant="service" />
+    </div>
+  );
 };
 
 export default ServicePage;
