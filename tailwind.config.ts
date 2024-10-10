@@ -17,6 +17,7 @@ const config: Config = {
           colorGrey: "#f9f8f3",
           lightYellow: "#efebe0",
           ProductOwner: "#f9f8f3",
+          feautrePill: "#90f0c0",
         },
       },
       backgroundImage: {

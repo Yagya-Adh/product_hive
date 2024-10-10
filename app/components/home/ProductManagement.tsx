@@ -40,13 +40,13 @@ const productData = [
 ];
 const ProductManagement = () => {
   return (
-    <div className="bg-productHives-mainBackground p-20">
+    <div className="bg-productHives-mainBackground lg:py-20 py-10">
       <div className="mx-auto max-w-screen-2xl px-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 py-10">
           <h1 className="text-5xl text-white">
-            Why you should choose our
+            Why you should choose our{" "}
             <span className="text-productHives-buttonColor">
-              Product Management
+              Product Management{" "}
             </span>
             consulting services?
           </h1>
@@ -57,13 +57,20 @@ const ProductManagement = () => {
             organization as they go:
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-10 bg-white">
+        <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl gap-10 overflow-hidden items-center">
           {productData?.map((product) => (
-            <div key={product.id}>
-              <Image className="" alt="" src={product.image} />
-              <h1>{product.title}</h1>
+            <div
+              className="h-full flex flex-col justify-center md:flex-row md:justify-between lg:grid-cols-2 lg:grid  rounded-2xl gap-10 overflow-hidden items-center p-5 bg-white"
+              key={product.id}
+            >
+              <Image className="rounded-2xl" alt="" src={product.image} />
+              <div>
+                <h1 className="text-productHives-buttonColor font-bold text-xl">
+                  {product.title}
+                </h1>
 
-              <p>{product.description}</p>
+                <p>{product.description}</p>
+              </div>
             </div>
           ))}
         </div>
