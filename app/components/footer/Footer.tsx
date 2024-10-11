@@ -59,7 +59,7 @@ export default Footer;
 
 const FooterGridSection = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center p-10">
       <FooterSectionOne />
       <FooterSectionTwo />
     </div>
@@ -69,7 +69,7 @@ const FooterGridSection = () => {
 const FooterSectionOne = () => {
   return (
     <>
-      <div className="p-10">
+      <div className="">
         <div className="py-2">
           <MainLogo logo="footer" />
         </div>
