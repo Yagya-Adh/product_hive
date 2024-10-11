@@ -1,4 +1,4 @@
-import MainBainner from "./components/banner/MainBainner";
+import MainBanner from "./components/banner/MainBanner";
 import ProductOwner from "./components/banner/ProductOwner";
 import Footer from "./components/footer/Footer";
 import FeautreRequest from "./components/home/FeautreRequest";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <>
       {/* <div className="bg-productHives-mainBackground pt-10 pb-40"></div> */}
-      <MainBainner />
+      <MainBanner variant="home" />
       <ProductOwner />
       <PreSegment />
       <ProductManagement />

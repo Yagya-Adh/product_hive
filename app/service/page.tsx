@@ -1,12 +1,14 @@
 "use client";
 
 import React from "react";
-import MainBainner from "../components/banner/MainBainner";
+import MainBanner from "../components/banner/MainBanner";
+import Footer from "../components/footer/Footer";
 
 const ServicePage = () => {
   return (
     <div>
-      <MainBainner variant="service" />
+      <MainBanner variant="service" />
+      <Footer />
     </div>
   );
 };

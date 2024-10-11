@@ -24,7 +24,7 @@ const CustomTextBanner = ({
             {postText ? postText : ""}
           </p>
         </div>
-        <p>{discription ? discription : ""}</p>
+        <p className="max-w-screen-sm">{discription ? discription : ""}</p>
         <div className="p-10 flex justify-between items-center text-black">
           <ButtonPills text="Let's Work Together" />
           <ButtonPills
