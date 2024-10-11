@@ -11,9 +11,8 @@ interface IrouteData {
 const routeData: IrouteData[] = [
   {
     id: 1,
-    head: "",
+    head: "Pages",
     path: [
-      "Pages",
       "Home V1",
       "Home V2",
       "Services",
@@ -27,9 +26,8 @@ const routeData: IrouteData[] = [
   },
   {
     id: 2,
-    head: "",
+    head: "More Pages",
     path: [
-      "More Pages",
       "Pricing",
       "Career",
       "Blog Details",
@@ -42,8 +40,8 @@ const routeData: IrouteData[] = [
   },
   {
     id: 3,
-    head: "",
-    path: ["Template", "Style Guide ", "Licenses ", "Changelog"],
+    head: "Template",
+    path: ["Style Guide ", "Licenses ", "Changelog"],
   },
 ];
 
@@ -62,6 +60,15 @@ export default Footer;
 const FooterGridSection = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <FooterSectionOne />
+      <FooterSectionTwo />
+    </div>
+  );
+};
+
+const FooterSectionOne = () => {
+  return (
+    <>
       <div className="p-10">
         <div className="py-2">
           <MainLogo logo="footer" />
@@ -73,19 +80,26 @@ const FooterGridSection = () => {
           <ButtonPills text="Buy Template" />
         </div>
       </div>
-
-      <FooterSectionTwo />
-    </div>
+    </>
   );
 };
 
 const FooterSectionTwo = () => {
   return (
     <>
-      <div className=" flex flex-row border-red-300 justify-items-center ">
+      <div className="flex flex-row justify-between">
         {routeData?.map((listRoute) => (
-          <div className=" text-xl p-1" key={listRoute.id}>
-            {listRoute.path}
+          <div className=" flex flex-col text-xl p-1" key={listRoute.id}>
+            <h1 className="text-2xl font-bold text-productHives-mainBackground">
+              {listRoute.head}
+            </h1>
+            <div className="leading-10 text-productHives-TextSecondary">
+              {listRoute.path?.map((item, index) => (
+                <h2 className="" key={index}>
+                  {item}
+                </h2>
+              ))}
+            </div>
           </div>
         ))}
       </div>
