@@ -8,8 +8,8 @@ const SliderCard = () => {
     return alert("click");
   };
   return (
-    <div className="bg-white rounded-xl text-productHives-TextSecondary p-4">
-      <div className="grid grid-cols-2 px-10">
+    <div className="bg-white rounded-xl text-productHives-TextSecondary">
+      <div className="grid grid-cols-2 px-10 relative overflow-hidden z-20  p-20">
         <p className="text-productHives-TextSecondary text-4xl max-w-screen-sm font-bold">
           &ldquo;We&apos;re delighted with it. This is utterly fantastic! I
           enjoy it more with each passing day because it makes my daily tasks so
@@ -21,9 +21,17 @@ const SliderCard = () => {
           </div>
         </div>
       </div>
-
-      <div className="grid grid-cols-2 items-center px-10">
-        <div className="flex items-center">
+      <div className="absolute top-1 -right-1 z-10">
+        <Image
+          height={200}
+          width={200}
+          className=""
+          alt="cardWaterMark_"
+          src="https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c2b4d1360a25b9913be4_bg-element-services-feature.svg"
+        />
+      </div>
+      <div className="grid grid-cols-2 items-center px-10 relative overflow-hidden z-20 ">
+        <div className="flex items-center relative ">
           <Image src={doubleCot} alt="DoubkeCot_" className="mx-2" />
           <h1 className="text-productHives-TextSecondary font-bold text-3xl flex flex-col items-center">
             Emily Johnson

@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Discovery Phase",
+    "slug": "Understanding your aspirations and challenges is pivotal. We immerse ourselves in your world, conducting thorough assessments and audits to delineate a tailored roadmap.",
+    "imageUrl": "https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c1cf316335c8ee235d2d_feature-image-1.svg"
+  },
+
+  {
+    "id": 2,
+    "title": "Strategy Development",
+    "slug": "Armed with insights, we forge a comprehensive strategy aligned with your objectives. Our multidisciplinary approach integrates digital, business, and technology facets to maximize impact.",
+    "imageUrl": "https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c20b316335c8ee238a1b_feature-image-2.svg"
+  },
+
+  {
+    "id": 3,
+    "title": "Implementation",
+    "slug": "Execution is where vision meets reality. We deploy our expertise to implement strategies seamlessly, providing continuous support to ensure sustained success and adaptability in a dynamic landscape.",
+    "imageUrl": "https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c21d4b5d2b49fc187647_feature-image-3.svg"
+  }
+]

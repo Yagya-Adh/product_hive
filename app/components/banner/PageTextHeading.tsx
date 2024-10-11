@@ -14,13 +14,13 @@ const PageTextHeading = ({
   title,
 }: IPageTextHeading) =>
   variant === "our-process" ? (
-    <div className="flex flex-col items-center text-white">
+    <div className="flex flex-col items-center text-white overflow-hidden relative">
       <p className="font-bold text-xl ">{title && title}</p>
-      <h1 className="text-6xl max-w-screen-xl font-semibold capitalize text-center py-10 px-10 mx-auto">
-        {preText && preText}
-        <span className="text-productHives-buttonColor capitalize">
+      <h1 className="text-6xl max-w-screen-xl font-semibold   text-center py-10 px-10 mx-auto">
+        {preText && preText}{" "}
+        <span className="text-productHives-buttonColor  ">
           {higlightText && higlightText}{" "}
-        </span>
+        </span>{" "}
         {postText && postText}
       </h1>
     </div>

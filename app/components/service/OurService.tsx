@@ -56,7 +56,6 @@ const OurService = () => {
             higlightText="Product owner is a key"
             postText="to maximizing the value of your product"
           />
-
           <GridCardGroup />
         </div>
       </div>

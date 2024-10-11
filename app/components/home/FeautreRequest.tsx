@@ -6,7 +6,7 @@ import feautreRequestImage from "@/app/assets/images/feautreRequest/feauterReque
 
 const FeautreRequest = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-10 py-20">
+    <div className="max-w-screen-2xl mx-auto px-10 py-80">
       <FeautreBanner />
       <FeautreBodyGroup />
     </div>

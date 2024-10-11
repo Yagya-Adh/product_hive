@@ -1,5 +1,6 @@
 "use client";
 import serviceCardData from "@/serviceCard.json";
+import serviceCardProcessData from "@/serviceCardProccess.json";
 import Image from "next/image";
 interface IserviceCardData {
   id: number;
@@ -7,10 +8,22 @@ interface IserviceCardData {
   slug: string;
   imageUrl: string;
 }
+interface IserviceCardDataProcess {
+  id: number;
+  title: string;
+  slug: string;
+  imageUrl: string;
+}
 const dataBanner: IserviceCardData[] = serviceCardData;
+const dataBannerProcess: IserviceCardDataProcess[] = serviceCardProcessData;
 
 interface IBannerCard {
-  variant?: string | "defautl-service" | "default-home" | "defautl-about";
+  variant?:
+    | string
+    | "defautl-service"
+    | "default-home"
+    | "defautl-about"
+    | "default-service-process";
 }
 const BannerCard = ({ variant }: IBannerCard) =>
   variant == "defautl-service" ? (
@@ -43,6 +56,30 @@ const BannerCard = ({ variant }: IBannerCard) =>
 
               <h1 className="font-bold text-xl">{cardData.title}</h1>
               <p className="max-w-sm">{cardData.slug}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  ) : variant == "defautl-service-process" ? (
+    <>
+      <div className="  text-white   relative overflow-hidden z-20  rounded-2xl w-full p-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-10">
+          {dataBannerProcess?.map((cardData) => (
+            <div
+              className="flex flex-col justify-center bg-[#103128] p-10 rounded-2xl"
+              key={cardData.id}
+            >
+              <Image
+                src={cardData.imageUrl && cardData.imageUrl}
+                alt="card_"
+                height={60}
+                width={60}
+                className="p-1"
+              />
+              <h3 className="py-4">0{cardData.id}</h3>
+              <h1 className="font-bold text-2xl">{cardData.title}</h1>
+              <p className="max-w-sm py-4">{cardData.slug}</p>
             </div>
           ))}
         </div>
