@@ -6,54 +6,37 @@ import BannerCard from "../card/BannerCard";
 interface IMainBainner {
   variant?: string | "service" | "home" | "about";
 }
-const MainBanner = ({ variant }: IMainBainner) => {
-  if (variant == "service") {
-    return (
-      <>
-        <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
-          <div className="max-w-screen-2xl mx-auto px-10 relative ">
-            <NavBar />
-            <PageBanner variant="service" />
-            <div className="absolute -bottom-72">
-              <BannerCard variant="building" />
-            </div>
-          </div>
+const MainBanner = ({ variant }: IMainBainner) =>
+  variant === "service" ? (
+    <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
+      <div className="max-w-screen-2xl mx-auto px-10 relative ">
+        <NavBar />
+        <PageBanner variant="service" />
+        <div className="absolute -bottom-72">
+          <BannerCard variant="defautl-service" />
         </div>
-      </>
-    );
-  }
-
-  if (variant == "about") {
-    return (
-      <>
-        <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
-          <div className="max-w-screen-2xl mx-auto px-10 relative ">
-            <NavBar />
-            <PageBanner variant="about" />
-            <div className="absolute -bottom-72">
-              <BannerCard variant="building" />
-            </div>
-          </div>
+      </div>
+    </div>
+  ) : variant === "about" ? (
+    <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
+      <div className="max-w-screen-2xl mx-auto px-10 relative ">
+        <NavBar />
+        <PageBanner variant="about" />
+        <div className="absolute -bottom-72">
+          <BannerCard variant="defautl-about" />
         </div>
-      </>
-    );
-  }
-
-  if (variant == "home") {
-    return (
-      <>
-        <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
-          <div className="max-w-screen-2xl mx-auto px-10 relative ">
-            <NavBar />
-            <PageBanner variant="home" />
-            <div className="absolute -bottom-72">
-              <BannerCard variant="default-home" />
-            </div>
-          </div>
+      </div>
+    </div>
+  ) : variant === "home" ? (
+    <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
+      <div className="max-w-screen-2xl mx-auto px-10 relative ">
+        <NavBar />
+        <PageBanner variant="home" />
+        <div className="absolute -bottom-72">
+          <BannerCard variant="default-home" />
         </div>
-      </>
-    );
-  }
-};
+      </div>
+    </div>
+  ) : null;
 
 export default MainBanner;

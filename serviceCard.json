@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Expert Consultancy",
+    "slug": "Access guidance from seasoned professionals, ensuring strategic insights.",
+    "imageUrl": "https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c1cf316335c8ee235d2d_feature-image-1.svg"
+  },
+
+  {
+    "id": 2,
+    "title": "Proven Track Record",
+    "slug": "Benefit from our history of successful projects and satisfied clients, showcasing our commitment.",
+    "imageUrl": "https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c20b316335c8ee238a1b_feature-image-2.svg"
+  },
+
+  {
+    "id": 3,
+    "title": "Transparency & Communication",
+    "slug": "Experience clear communication and transparency throughout our collaboration, fostering trust.",
+    "imageUrl": "https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c21d4b5d2b49fc187647_feature-image-3.svg"
+  }
+]

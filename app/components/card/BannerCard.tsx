@@ -1,68 +1,85 @@
 "use client";
-
-// const dataBanner = [
-//   {
-//     id: 1,
-//     title: "Expert Consultancy",
-//     slug: "Access guidance from seasoned professionals, ensuring strategic insights.",
-//   },
-
-//   {
-//     id: 2,
-//     title: "Proven Track Record",
-//     slug: "Benefit from our history of successful projects and satisfied clients, showcasing our commitment.",
-//   },
-
-//   {
-//     id: 3,
-//     title: "Transparency & Communication",
-//     slug: "Experience clear communication and transparency throughout our collaboration, fostering trust.",
-//   },
-// ];
+import serviceCardData from "@/serviceCard.json";
+import Image from "next/image";
+interface IserviceCardData {
+  id: number;
+  title: string;
+  slug: string;
+  imageUrl: string;
+}
+const dataBanner: IserviceCardData[] = serviceCardData;
 
 interface IBannerCard {
-  variant?: string | "building" | "default-home";
+  variant?: string | "defautl-service" | "default-home" | "defautl-about";
 }
-const BannerCard = ({ variant }: IBannerCard) => {
-  if (variant == "building") {
-    return (
-      <>
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 rounded-2xl items-center p-10 border bg-white">
-          <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
-            Our versatile business solutions
-            <span className="text-productHives-buttonColor">
-              & expert services
-            </span>
-          </p>
-
-          <p className="max-w-screen-sm lg:text-xl">
-            Discover our services, from enhancing your digital footprint to
-            developing growth strategies, integrating tech solutions, and
-            offering expert advice for your business&apos;s success.
-          </p>
+const BannerCard = ({ variant }: IBannerCard) =>
+  variant == "defautl-service" ? (
+    <>
+      <div className="bg-white relative overflow-hidden z-20  rounded-2xl w-full p-10">
+        <div className="absolute -top-1 right-1 -z-10">
+          <Image
+            height={200}
+            width={200}
+            className=""
+            alt="cardWaterMark_"
+            src="https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c2b4d1360a25b9913be4_bg-element-services-feature.svg"
+          />
         </div>
-      </>
-    );
-  }
-  if (variant == "default-home") {
-    return (
-      <>
-        <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 rounded-2xl items-center p-10 border bg-white">
-          <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
-            Building trust on our key features
-          </p>
 
-          <p className="max-w-screen-sm lg:text-xl">
-            The majority of new digital products fail, with 35% falling short
-            due to a lack of market need. These failings stem from a lack of
-            market and user research. With ProductHive, you can validate your
-            idea and boost your chances of successful product launch.
-          </p>
+        <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
+          Building trust on our key features
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-4">
+          {dataBanner?.map((cardData) => (
+            <div className="flex flex-col justify-center" key={cardData.id}>
+              <Image
+                src={cardData.imageUrl && cardData.imageUrl}
+                alt="card_"
+                height={60}
+                width={60}
+                className="p-1"
+              />
+
+              <h1 className="font-bold text-xl">{cardData.title}</h1>
+              <p className="max-w-sm">{cardData.slug}</p>
+            </div>
+          ))}
         </div>
-      </>
-    );
-  }
-};
+      </div>
+    </>
+  ) : variant == "default-home" ? (
+    <>
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 rounded-2xl items-center p-10 border bg-white">
+        <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
+          Building trust on our key features
+        </p>
+
+        <p className="max-w-screen-sm lg:text-xl">
+          The majority of new digital products fail, with 35% falling short due
+          to a lack of market need. These failings stem from a lack of market
+          and user research. With ProductHive, you can validate your idea and
+          boost your chances of successful product launch.
+        </p>
+      </div>
+    </>
+  ) : variant === "defautl-about" ? (
+    <>
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 rounded-2xl items-center p-10 border bg-white">
+        <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
+          Building trust on our key features
+        </p>
+
+        <p className="max-w-screen-sm lg:text-xl">
+          The majority of new digital products fail, with 35% falling short due
+          to a lack of market need. These failings stem from a lack of market
+          and user research. With ProductHive, you can validate your idea and
+          boost your chances of successful product launch.
+        </p>
+      </div>
+    </>
+  ) : null;
+
 export default BannerCard;
 
 /* 
@@ -94,10 +111,10 @@ const dataBanner = [
 ];
 
 interface IBannerCard {
-  variant?: string | "building";
+  variant?: string | "defautl-service";
 }
 const BannerCard = ({ variant }: IBannerCard) => {
-  if (variant == "building") {
+  if (variant == "defautl-service") {
     return (
       <>
         <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 rounded-2xl items-center p-10 border bg-white">

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Business Strategy",
+    "head": "Optimize Your Business Strategy",
+    "describe": "Leverage data-driven insights, agile methods, and customer-centric approaches for optimal business strategies.",
+    "imageUrl": "https://product-hive.webflow.io/service/optimize-your-business-strategy",
+    "bgColor": ""
+  },
+  {
+    "id": 2,
+    "title": "Business Strategy",
+    "head": "Navigate Markets Effectively",
+    "describe": "Analyze trends, adapt swiftly, and prioritize customer needs for effective market navigation.",
+    "imageUrl": "https://product-hive.webflow.io/service/navigate-markets-effectively",
+    "bgColor": ""
+  },
+  {
+    "id": 3,
+    "title": "Digital Transformation",
+    "head": "Boost Your Online Presence",
+    "describe": "Leverage SEO, engaging content, and social media for a robust online presence and increased visibility.",
+    "imageUrl": "https://product-hive.webflow.io/service/boost-your-online-presence",
+    "bgColor": ""
+  },
+  {
+    "id": 4,
+    "title": "Technology Integration",
+    "head": "Innovative Tech Solutions",
+    "describe": "Harness emerging technologies creatively to solve problems and drive efficiency in your business operations.",
+    "imageUrl": "https://product-hive.webflow.io/service/innovative-tech-solutions",
+    "bgColor": ""
+  }
+]
