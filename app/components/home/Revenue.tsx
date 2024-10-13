@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import CustomTextBanner from "../banner/CustomTextBanner";
 import SliderCard from "../card/SliderCard";
 

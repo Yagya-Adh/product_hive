@@ -1,9 +1,11 @@
 "use client";
-
-import React from "react";
 import MainBanner from "../components/banner/MainBanner";
 import OurStory from "../components/about/OurStory";
 import OurCoreValue from "../components/about/OurCoreValue";
+import OurTeam from "../components/about/OurTeam";
+import MeetOurTeam from "../components/about/MeetOurTeam";
+import Footer from "../components/footer/Footer";
+import OportunityToJoin from "../components/about/OportunityToJoin";
 
 const AboutPage = () => {
   return (
@@ -11,6 +13,10 @@ const AboutPage = () => {
       <MainBanner variant="about" />
       <OurStory />
       <OurCoreValue />
+      <OurTeam />
+      <MeetOurTeam />
+      <OportunityToJoin />
+      <Footer />
     </>
   );
 };

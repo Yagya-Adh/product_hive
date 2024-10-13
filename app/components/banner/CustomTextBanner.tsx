@@ -29,7 +29,7 @@ const CustomTextBanner = ({
         <ButtonPills
           text="Book A Call"
           variant="button-outline"
-          padding="px-14"
+          padding="px-10"
         />
       </div>
     </div>

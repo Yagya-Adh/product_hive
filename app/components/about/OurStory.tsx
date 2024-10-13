@@ -113,16 +113,3 @@ const StoryCardText = () => {
     </>
   );
 };
-/* 
-const CardGridCalculate = ({ cardCalculate }) => {
-  return (
-    <div
-      className="rounded-2xl bg-productHives-lightYellow h-full w-full text-start p-4"
-      key={cardCalculate.id}
-    >
-      <h1 className="text-6xl font-bold ">{cardCalculate.percentage}</h1>
-
-      <h4 className="text-xl w-full py-5">{cardCalculate.slug}</h4>
-    </div>
-  );
-}; */
