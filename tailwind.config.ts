@@ -16,6 +16,8 @@ const config: Config = {
           buttonColor: "#46e696",
           colorGrey: "#f9f8f3",
           lightYellow: "#efebe0",
+          // #efebe0;
+
           ProductOwner: "#f9f8f3",
           feautrePill: "#90f0c0",
           TextSecondary: "#102c24",
