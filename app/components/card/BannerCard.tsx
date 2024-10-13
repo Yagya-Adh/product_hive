@@ -40,10 +40,46 @@ interface IBannerCard {
     | "default-home"
     | "defautl-about"
     | "default-service-process"
-    | "default-our-values";
+    | "default-our-values"
+    | "defautl-contact";
 }
 const BannerCard = ({ variant }: IBannerCard) =>
-  variant == "default-our-values" ? (
+  variant == "defautl-contact" ? (
+    <>
+      <div className="bg-white relative overflow-hidden z-20  rounded-2xl w-full p-10">
+        {/* <div className="absolute -top-1 right-1 -z-10">
+          <Image
+            height={200}
+            width={200}
+            className=""
+            alt="cardWaterMark_"
+            src="https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c2b4d1360a25b9913be4_bg-element-services-feature.svg"
+          />
+        </div> */}
+
+        <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
+          Building trust on our key features
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-4">
+          {dataBanner?.map((cardData) => (
+            <div className="flex flex-col justify-center" key={cardData.id}>
+              <Image
+                src={cardData.imageUrl && cardData.imageUrl}
+                alt="card_"
+                height={60}
+                width={60}
+                className="p-1"
+              />
+
+              <h1 className="font-bold text-xl">{cardData.title}</h1>
+              <p className="max-w-sm">{cardData.slug}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  ) : variant == "default-our-values" ? (
     <>
       <div className="bg-productHives-ProductOwner relative overflow-hidden z-20 rounded-2xl w-full py-10 px-10">
         {/* title */}

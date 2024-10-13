@@ -6,11 +6,23 @@ import personTwo from "@/app/assets/images/home/heroin.webp";
 import CustomTextBanner from "./CustomTextBanner";
 
 interface IPageBanner {
-  variant: "home" | "service" | "about";
+  variant: "home" | "service" | "about" | "contact";
 }
 
 const PageBanner = ({ variant }: IPageBanner) =>
-  variant === "home" ? (
+  variant === "contact" ? (
+    <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
+      <div className="font-bold">
+        <h5>Contact Us</h5>
+      </div>
+      <CustomTextBanner
+        buttonGroup={true}
+        preText="We're "
+        highlightText="here to help"
+        buttonGroup={false}
+      />
+    </div>
+  ) : variant === "home" ? (
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
       <div className="hidden lg:flex absolute top-10 left-20 overflow-hidden rounded-full">
         <Image src={personOne} alt="home_" className="size-48" />
