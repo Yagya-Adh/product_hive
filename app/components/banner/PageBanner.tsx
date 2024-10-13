@@ -19,6 +19,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
         <Image src={personTwo} alt="home_" className="size-48" />
       </div>
       <CustomTextBanner
+        buttonGroup={true}
         preText="The customer engagement platform for"
         highlightText="every small business"
       />
@@ -26,6 +27,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
   ) : variant === "service" ? (
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
       <CustomTextBanner
+        buttonGroup={true}
         preText="Our versatile business solutions"
         highlightText="& expert services"
         discription="Discover our services, from enhancing your digital footprint to developing growth strategies, integrating tech solutions, and offering expert advice for your business&lsquo;s success."
@@ -34,6 +36,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
   ) : variant === "about" ? (
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
       <CustomTextBanner
+        buttonGroup={true}
         preText="Unveiling the Journey of"
         highlightText="about us"
         discription="We believe that entrepreneurs are society's problem solvers. They see opportunities in complexities and drive us towards progress"

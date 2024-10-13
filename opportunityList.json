@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "position": "Senior Management Consultant",
+    "location": "Remote (USA time zones)",
+    "duration": "40 Hours"
+  },
+  {
+    "id": 2,
+    "position": "Financial Analyst",
+    "location": "New York, USA",
+    "duration": "40 Hours"
+  },
+  {
+    "id": 3,
+    "position": "Human Resources Consultant",
+    "location": "Washington, DC, USA",
+    "duration": "40 Hours"
+  },
+  {
+    "id": 4,
+    "position": "IT Solutions Consultant",
+    "location": "Utrecht",
+    "duration": "40 Hours"
+  }
+]
