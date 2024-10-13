@@ -5,6 +5,7 @@ import OurCoreValue from "../components/about/OurCoreValue";
 import OurTeam from "../components/about/OurTeam";
 import MeetOurTeam from "../components/about/MeetOurTeam";
 import Footer from "../components/footer/Footer";
+import MapYourLocation from "../components/about/MapYourLocation";
 import OportunityToJoin from "../components/about/OportunityToJoin";
 
 const AboutPage = () => {
@@ -15,6 +16,7 @@ const AboutPage = () => {
       <OurCoreValue />
       <OurTeam />
       <MeetOurTeam />
+      <MapYourLocation />
       <OportunityToJoin />
       <Footer />
     </>
