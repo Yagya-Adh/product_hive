@@ -5,9 +5,9 @@ import MainBanner from "../components/banner/MainBanner";
 
 const AboutPage = () => {
   return (
-    <div>
+    <>
       <MainBanner variant="about" />
-    </div>
+    </>
   );
 };
 

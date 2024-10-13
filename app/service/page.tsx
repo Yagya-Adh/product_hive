@@ -12,6 +12,7 @@ const ServicePage = () => {
       <MainBanner variant="service" />
       <OurService />
       <OurProcess />
+      {/* <OurVlue/> */}
       <FeautreRequest />
       <Revenue />
       <Footer />
