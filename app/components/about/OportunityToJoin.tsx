@@ -18,7 +18,7 @@ const OportunityToJoin = () => {
   return (
     <>
       <div className="bg-productHives-colorGrey">
-        <div className="mx-auto px-10 max-w-screen-2xl">
+        <div className="mx-auto px-10 max-w-screen-2xl py-10">
           <div className="flex flex-col">
             <div>
               <CustomTextBanner
@@ -60,7 +60,7 @@ const OportunityToJoin = () => {
             </div>
           </div>
         </div>
-        <div className="bg-productHives-mainBackground">
+        <div className="bg-productHives-mainBackground py-10">
           <CustomTextBanner
             preText="Do not find a role you are"
             highlightText="looking for?"

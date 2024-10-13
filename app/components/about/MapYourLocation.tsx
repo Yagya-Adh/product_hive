@@ -4,7 +4,7 @@ import worldMap from "@/app/assets/images/map/worldmap.png";
 import ButtonPills from "../button/ButtonPills";
 const MapYourLocation = () => {
   return (
-    <div className="bg-productHives-colorGrey">
+    <div className="bg-productHives-colorGrey border-b border-t">
       <div className="mx-auto max-w-screen-2xl px-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="flex flex-col p-10">
