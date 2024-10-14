@@ -14,7 +14,7 @@ export default function Home() {
       <PreSegment />
       <ProductManagement />
       <FeautreRequest />
-      <Revenue />
+      <Revenue topCardShow="show" />
       <Footer />
     </>
   );

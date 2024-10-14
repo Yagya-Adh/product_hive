@@ -2,14 +2,20 @@
 // import Image from "next/image";
 import CustomTextBanner from "../banner/CustomTextBanner";
 import SliderCard from "../card/SliderCard";
-
-const Revenue = () => {
+interface IRevenue {
+  topCardShow: string | "show" | "hide";
+}
+const Revenue = ({ topCardShow }: IRevenue) => {
   return (
     <div className="bg-productHives-mainBackground relative">
       <div className="max-w-screen-2xl mx-auto px-10 py-40 relative">
-        <div className="absolute -top-72">
-          <SliderCard />
-        </div>
+        {topCardShow == "show" ? (
+          <div className="absolute -top-72">
+            <SliderCard />
+          </div>
+        ) : (
+          ""
+        )}
         <CustomTextBanner
           preText="Revenue enablement that"
           highlightText="customers love"

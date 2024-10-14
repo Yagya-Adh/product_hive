@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Sales & Partnerships",
+    "slug": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum et tempor nisl.",
+    "imageUrl": "https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6645a259be8331eaa6b99379_icon-card.svg"
+  },
+
+  {
+    "id": 2,
+    "title": "Customer Support",
+    "slug": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae mollis massa. Vivamus.",
+    "imageUrl": "https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/662a1aaaf9c95c679ca99c46_icon-guidance-2.svg"
+  },
+
+  {
+    "id": 3,
+    "title": "Message",
+    "slug": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultricies diam ut mattis.",
+    "imageUrl": "https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6645a282441013a9614f40f2_icon-card-3.svg"
+  }
+]

@@ -1,11 +1,13 @@
 "use client";
+import Image from "next/image";
 import serviceCardData from "@/serviceCard.json";
 import serviceCardProcessData from "@/serviceCardProccess.json";
 import aboutCardDataList from "@/aboutCardData.json";
 import ourStoryCardData from "@/ourStoryData.json";
 import ourValuesData from "@/ourValuesData.json";
-
-import Image from "next/image";
+import listenImage from "@/app/assets/images/contact/listen.webp";
+import ContactUsForm from "../contact/ContactUsForm";
+import ourContacts from "@/ourContactData.json";
 interface IserviceCardData {
   id: number;
   title: string;
@@ -41,41 +43,42 @@ interface IBannerCard {
     | "defautl-about"
     | "default-service-process"
     | "default-our-values"
-    | "defautl-contact";
+    | "defautl-contact"
+    | "default-our-contact";
 }
 const BannerCard = ({ variant }: IBannerCard) =>
-  variant == "defautl-contact" ? (
+  variant == "defautl-our-contact" ? (
     <>
-      <div className="bg-white relative overflow-hidden z-20  rounded-2xl w-full p-10">
-        {/* <div className="absolute -top-1 right-1 -z-10">
-          <Image
-            height={200}
-            width={200}
-            className=""
-            alt="cardWaterMark_"
-            src="https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c2b4d1360a25b9913be4_bg-element-services-feature.svg"
-          />
-        </div> */}
-
-        <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
-          Building trust on our key features
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-4">
-          {dataBanner?.map((cardData) => (
-            <div className="flex flex-col justify-center" key={cardData.id}>
+      <div className="relative overflow-hidden  w-full p-10 py-60">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {ourContacts?.map((cardData) => (
+            <div
+              className="flex flex-col justify-center text-white bg-productHives-mainBackground rounded-2xl py-14 px-4"
+              key={cardData.id}
+            >
               <Image
                 src={cardData.imageUrl && cardData.imageUrl}
                 alt="card_"
-                height={60}
-                width={60}
+                height={100}
+                width={100}
                 className="p-1"
               />
 
-              <h1 className="font-bold text-xl">{cardData.title}</h1>
-              <p className="max-w-sm">{cardData.slug}</p>
+              <h1 className="font-bold text-3xl pt-10">{cardData.title}</h1>
+              <p className="max-w-sm py-4">{cardData.slug}</p>
             </div>
           ))}
+        </div>
+      </div>
+    </>
+  ) : variant == "defautl-contact" ? (
+    <>
+      <div className="bg-white relative overflow-hidden z-20 rounded-2xl p-10 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <Image src={listenImage} alt="card_" className="p-1 rounded-2xl" />
+          <div className="flex flex-col justify-center items-center px-10 w-full">
+            <ContactUsForm />
+          </div>
         </div>
       </div>
     </>

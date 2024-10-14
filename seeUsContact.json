@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "location": "New York, USA",
+    "address": "714, Snowbird Lane Omaha",
+    "email": "newyorkexample@gmail.com",
+    "contact": "402 - 716 - 2724"
+  },
+  {
+    "id": 2,
+    "location": "Arkansas, USA",
+    "address": "164, Rosebud Avenue",
+    "email": "arkansasexample@gmail.com",
+    "contact": "402 - 716 - 2724"
+  },
+
+  {
+    "id": 3,
+    "location": "London, UK",
+    "address": "222, Baker Street",
+    "email": "bakerstreetexample@gmail.com",
+    "contact": "402 - 716 - 2724"
+  }
+]

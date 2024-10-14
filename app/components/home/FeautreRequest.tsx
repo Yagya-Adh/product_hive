@@ -55,16 +55,17 @@ const dataFeautre = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eos, cumque quibusdam quam praesentium possimus, at repudiandae modi labore quos perspiciatis illo harum laudantium architecto doloremque consequatur est accusantium quia.",
   },
 ];
-const FeautreBodyGroup = () => {
-  const [isShow, setIsShow] = useState(false);
 
-  const handleShow = () => {
-    return setIsShow(!isShow);
+const FeautreBodyGroup = () => {
+  const [isShowID, setIsShowID] = useState<number | null>(null);
+
+  const handleShow = (id: number) => {
+    return setIsShowID((prevID) => (prevID == id ? null : id));
   };
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div className="p-10 text-5xl font-bold ">
+        <div className="p-10 text-5xl font-bold  h-full">
           We connect our{" "}
           <span className="text-productHives-buttonColor">
             {" "}
@@ -72,7 +73,7 @@ const FeautreBodyGroup = () => {
           </span>
           , and help them keep up-and stay open.
         </div>
-        <div className="p-10">
+        <div className="p-10 py-10">
           {dataFeautre?.map((feautre) => (
             <div
               className="border-b-2 border-b-gray-200 w-full"
@@ -80,20 +81,20 @@ const FeautreBodyGroup = () => {
             >
               <div
                 className="flex justify-between items-center py-4 transition-all ease-in-out duration-500 transform"
-                onClick={handleShow}
+                onClick={() => handleShow(feautre.id)}
               >
                 <h1 className="font-bold">{feautre.question}</h1>{" "}
-                {isShow ? (
-                  <div className="bg-productHives-buttonColor rounded-full ">
+                {isShowID === feautre.id ? (
+                  <div className="bg-productHives-buttonColor rounded-full transition-all ease-in-out duration-500 transform">
                     <ChevronUpIcon className="size-7" />
                   </div>
                 ) : (
-                  <div className="bg-productHives-buttonColor rounded-full ">
+                  <div className="bg-productHives-buttonColor rounded-full transition-all ease-in-out duration-500 transform">
                     <ChevronDownIcon className="size-7" />
                   </div>
                 )}
-              </div>{" "}
-              {isShow && (
+              </div>
+              {isShowID === feautre.id && (
                 <p className="py-4 transition-all ease-in-out duration-500 transform">
                   {feautre.describe}
                 </p>

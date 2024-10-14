@@ -3,10 +3,10 @@
 import ButtonPills from "../button/ButtonPills";
 interface ICustomTextBanner {
   preText?: string;
-  highlightText: string;
+  highlightText?: string;
   postText?: string;
   discription?: string;
-  buttonGroup?: boolean;
+  buttonGroup?: boolean | undefined;
   textColor?: "light-yellow" | "dark-green" | "white";
 }
 

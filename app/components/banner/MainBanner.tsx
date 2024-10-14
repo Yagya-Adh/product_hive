@@ -12,9 +12,9 @@ const MainBanner = ({ variant }: IMainBainner) =>
       <div className="max-w-screen-2xl mx-auto px-10 relative ">
         <NavBar />
         <PageBanner variant="contact" />
-        {/* <div className="absolute -bottom-72">
+        <div className="absolute -bottom-96">
           <BannerCard variant="defautl-contact" />
-        </div> */}
+        </div>
       </div>
     </div>
   ) : variant === "service" ? (
