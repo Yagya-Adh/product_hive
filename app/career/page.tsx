@@ -14,7 +14,6 @@ const Career = () => {
       <JoinUs />
       <Benefits />
       <SliderBar />
-      {/* <MapYourLocation /> */}
       <OportunityToJoin />
       <Footer />
     </>

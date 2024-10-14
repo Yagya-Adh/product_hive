@@ -1,5 +1,4 @@
 "use client";
-// import Image from "next/image";
 import CustomTextBanner from "../banner/CustomTextBanner";
 import SliderCard from "../card/SliderCard";
 interface IRevenue {
@@ -21,6 +20,7 @@ const Revenue = ({ topCardShow }: IRevenue) => {
           highlightText="customers love"
           textColor="white"
           buttonGroup={true}
+          variant="career"
         />
       </div>
     </div>
