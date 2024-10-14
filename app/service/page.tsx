@@ -14,7 +14,7 @@ const ServicePage = () => {
       <OurProcess />
       {/* <OurVlue/> */}
       <FeautreRequest />
-      <Revenue />
+      <Revenue topCardShow="show" />
       <Footer />
     </>
   );

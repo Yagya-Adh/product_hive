@@ -44,10 +44,40 @@ interface IBannerCard {
     | "default-service-process"
     | "default-our-values"
     | "defautl-contact"
-    | "default-our-contact";
+    | "default-our-contact"
+    | "default-career";
 }
+
+import imageOne from "@/app/assets/images/career/one.webp";
+import imageTwo from "@/app/assets/images/career/two.webp";
+import imageThree from "@/app/assets/images/career/three.webp";
+const careerData = [
+  { id: 1, image: imageOne },
+  { id: 2, image: imageTwo },
+  { id: 3, image: imageThree },
+];
+
 const BannerCard = ({ variant }: IBannerCard) =>
-  variant == "defautl-our-contact" ? (
+  variant == "defautl-career" ? (
+    <>
+      <div className="relative overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {careerData?.map((cardData) => (
+            <div
+              className="flex flex-col justify-center text-white bg-productHives-mainBackground rounded-2xl py-14 px-4"
+              key={cardData.id}
+            >
+              <Image
+                src={cardData.image && cardData.image}
+                alt="career_card_"
+                className="rounded-2xl"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  ) : variant == "defautl-our-contact" ? (
     <>
       <div className="relative overflow-hidden  w-full p-10 py-60">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -143,7 +173,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
     </>
   ) : variant == "defautl-service" ? (
     <>
-      <div className="bg-white relative overflow-hidden z-20  rounded-2xl w-full p-10">
+      <div className="bg-white relative overflow-hidden z-20  rounded-2xl p-10">
         <div className="absolute -top-1 right-1 -z-10">
           <Image
             height={200}
@@ -154,23 +184,23 @@ const BannerCard = ({ variant }: IBannerCard) =>
           />
         </div>
 
-        <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
+        <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg py-4">
           Building trust on our key features
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
           {dataBanner?.map((cardData) => (
             <div className="flex flex-col justify-center" key={cardData.id}>
               <Image
                 src={cardData.imageUrl && cardData.imageUrl}
                 alt="card_"
-                height={60}
-                width={60}
+                height={100}
+                width={100}
                 className="p-1"
               />
 
-              <h1 className="font-bold text-xl">{cardData.title}</h1>
-              <p className="max-w-sm">{cardData.slug}</p>
+              <h1 className="font-bold text-2xl py-1">{cardData.title}</h1>
+              <p className="max-w-sm py-1">{cardData.slug}</p>
             </div>
           ))}
         </div>
@@ -202,7 +232,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
     </>
   ) : variant == "default-home" ? (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 rounded-2xl items-center p-10 border bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 rounded-2xl items-center p-20 border bg-white">
         <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
           Building trust on our key features
         </p>

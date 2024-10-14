@@ -1,11 +1,12 @@
 "use client";
 
+import Link from "next/link";
 import ButtonPills from "../button/ButtonPills";
 interface ICustomTextBanner {
   preText?: string;
   highlightText?: string;
   postText?: string;
-  discription?: string;
+  description?: string;
   buttonGroup?: boolean | undefined;
   textColor?: "light-yellow" | "dark-green" | "white";
 }
@@ -14,7 +15,7 @@ const CustomTextBanner = ({
   preText,
   highlightText,
   postText,
-  discription,
+  description,
   buttonGroup,
   textColor,
 }: ICustomTextBanner) => (
@@ -39,15 +40,17 @@ const CustomTextBanner = ({
           {postText ? postText : ""}
         </p>
       </div>
-      <p className="max-w-screen-sm">{discription ? discription : ""}</p>
+      <p className="max-w-screen-sm">{description ? description : ""}</p>
       {buttonGroup && (
         <div className="p-10 flex justify-between items-center text-black">
           <ButtonPills text="Let's Work Together" />
-          <ButtonPills
-            text="Book A Call"
-            variant="button-outline"
-            padding="px-10"
-          />
+          <Link href="/contact">
+            <ButtonPills
+              text="Book A Call"
+              variant="button-outline"
+              padding="px-10"
+            />
+          </Link>
         </div>
       )}
     </div>

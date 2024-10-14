@@ -71,7 +71,7 @@ const GridCardGroup = () => {
         <div
           className={` ${gridGroup.bgColor}
             
-            px-10 text-white rounded-2xl flex flex-col justify-center items-center relative z-20 overflow-hidden`}
+           pt-14 px-10 text-white rounded-2xl flex flex-col justify-center items-center relative z-20 overflow-hidden`}
           key={gridGroup.id}
         >
           <div className="flex flex-col items-center justify-center z-40 ">

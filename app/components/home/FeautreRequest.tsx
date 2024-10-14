@@ -6,7 +6,7 @@ import feautreRequestImage from "@/app/assets/images/feautreRequest/feauterReque
 
 const FeautreRequest = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-10 py-80">
+    <div className="max-w-screen-2xl mx-auto px-10 pt-40 pb-80">
       <FeautreBanner />
       <FeautreBodyGroup />
     </div>
@@ -64,7 +64,7 @@ const FeautreBodyGroup = () => {
   };
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-10">
         <div className="p-10 text-5xl font-bold  h-full">
           We connect our{" "}
           <span className="text-productHives-buttonColor">
