@@ -10,6 +10,8 @@ interface ICustomTextBanner {
   buttonGroup?: boolean | undefined;
   textColor?: "light-yellow" | "dark-green" | "white";
   variant?: string | "career";
+  pathRedirect?: string;
+  pathRedirectOne?: string;
 }
 
 const CustomTextBanner = ({
@@ -20,6 +22,8 @@ const CustomTextBanner = ({
   buttonGroup,
   textColor,
   variant,
+  pathRedirect,
+  pathRedirectOne,
 }: ICustomTextBanner) =>
   variant == "career" ? (
     <div className="flex flex-col items-center md:text-center justify-center">
@@ -36,13 +40,13 @@ const CustomTextBanner = ({
 
       md:max-w-screen-96 s p-10 text-4xl lg:text-6xl md:text-center  font-semibold max-w-screen-xl capitalize`}
       >
-        <span className={`"text-productHives-TextSecondary"`}>
+        <span className={`text-productHives-TextSecondary`}>
           {preText ? preText : ""}{" "}
         </span>
         <br />
         <p className="text-productHives-buttonColor ">
           {highlightText ? highlightText : ""}{" "}
-          <span className={`"text-productHives-TextSecondary"`}>
+          <span className={`text-productHives-TextSecondary`}>
             {postText ? postText : ""}
           </span>
         </p>
@@ -50,10 +54,10 @@ const CustomTextBanner = ({
       <p className="max-w-screen-sm">{description ? description : ""}</p>
       {buttonGroup && (
         <div className="p-10 flex justify-between items-center text-black">
-          <Link href={"/career"}>
+          <Link href={pathRedirect ? pathRedirect : "/career"}>
             <ButtonPills text="Contact Us" padding="px-10" />
           </Link>{" "}
-          <Link href="/contact">
+          <Link href={pathRedirectOne ? pathRedirectOne : "/contact"}>
             <ButtonPills
               padding="px-10"
               text="Browser All Services"
@@ -79,28 +83,28 @@ const CustomTextBanner = ({
 
       md:max-w-screen-96 s p-10 text-4xl lg:text-6xl md:text-center  font-semibold max-w-screen-xl capitalize`}
         >
-          <span className={`"text-productHives-TextSecondary"`}>
+          <span className={`text-productHives-TextSecondary`}>
             {preText ? preText : ""}{" "}
           </span>
           <br />
           <p className="text-productHives-buttonColor ">
             {highlightText ? highlightText : ""}{" "}
-            <span className={`"text-productHives-TextSecondary"`}>
+            <span className={`text-productHives-TextSecondary`}>
               {postText ? postText : ""}
             </span>
           </p>
         </div>
-        <p className="max-w-screen-sm">{description ? description : ""}</p>
+        <p className="max-w-screen-sm py-4">{description ? description : ""}</p>
         {buttonGroup && (
           <div className="p-10 flex justify-between items-center text-black">
-            <Link href={"/career"}>
-              <ButtonPills text="Let's Work Together" />
+            <Link href={pathRedirect ? pathRedirect : "/career"}>
+              <ButtonPills text="Contact Us" padding="px-10" />
             </Link>{" "}
-            <Link href="/contact">
+            <Link href={pathRedirectOne ? pathRedirectOne : "/contact"}>
               <ButtonPills
-                text="Book A Call"
-                variant="button-outline"
                 padding="px-10"
+                text="Browser All Services"
+                variant="button-outline"
               />
             </Link>
           </div>
