@@ -63,7 +63,6 @@ const BannerCard = ({ variant }: IBannerCard) =>
                 width={100}
                 className="p-1"
               />
-
               <h1 className="font-bold text-3xl pt-10">{cardData.title}</h1>
               <p className="max-w-sm py-4">{cardData.slug}</p>
             </div>
@@ -76,9 +75,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
       <div className="bg-white relative overflow-hidden z-20 rounded-2xl p-10 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <Image src={listenImage} alt="card_" className="p-1 rounded-2xl" />
-          <div className="flex flex-col justify-center items-center px-10 w-full">
-            <ContactUsForm />
-          </div>
+          <ContactUsForm />
         </div>
       </div>
     </>

@@ -1,17 +1,17 @@
 "use client";
-
-import React from "react";
 import ButtonPills from "../button/ButtonPills";
 
 const ContactUsForm = () => {
   return (
-    <form>
-      <div>
+    <form onSubmit={() => alert("visit sws !")}>
+      <div className=" ">
         <h1 className="font-bold text-6xl">Contact Us</h1>
 
         <div className="flex py-4 text-xl justify-between items-center">
           <div>
-            <label htmlFor="firstName">First Name</label>
+            <label className="font-bold" htmlFor="firstName">
+              First Name
+            </label>
             <input
               className="border rounded-full p-2 focus:outline-none"
               type="text"
@@ -19,9 +19,10 @@ const ContactUsForm = () => {
               placeholder="First Name"
             />
           </div>
-
           <div>
-            <label htmlFor="lastName">Last Name</label>
+            <label className="font-bold" htmlFor="lastName">
+              Last Name
+            </label>
             <input
               className="border rounded-full p-2 focus:outline-none"
               type="text"
@@ -30,10 +31,11 @@ const ContactUsForm = () => {
             />
           </div>
         </div>
-
         <div className="flex py-4 text-xl justify-between items-center">
           <div>
-            <label htmlFor="email">Email</label>
+            <label className="font-bold" htmlFor="email">
+              Email
+            </label>
             <input
               className="border rounded-full p-2 focus:outline-none"
               type="text"
@@ -41,9 +43,10 @@ const ContactUsForm = () => {
               placeholder="Email address"
             />
           </div>
-
           <div>
-            <label htmlFor="phoneNumber">Phone number</label>
+            <label className="font-bold" htmlFor="phoneNumber">
+              Phone number
+            </label>
             <input
               className="border rounded-full p-2 focus:outline-none"
               type="text"
@@ -54,7 +57,9 @@ const ContactUsForm = () => {
         </div>
 
         <div className="flex flex-col py-4 text-xl justify-between ">
-          <label htmlFor="message">Message</label>
+          <label className="font-bold" htmlFor="message">
+            Message
+          </label>
           <textarea
             name="message"
             id="message"
