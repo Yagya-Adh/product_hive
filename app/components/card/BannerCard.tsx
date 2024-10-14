@@ -8,6 +8,8 @@ import ourValuesData from "@/ourValuesData.json";
 import listenImage from "@/app/assets/images/contact/listen.webp";
 import ContactUsForm from "../contact/ContactUsForm";
 import ourContacts from "@/ourContactData.json";
+import careerCardData from "@/careerBannerCard.json";
+
 interface IserviceCardData {
   id: number;
   title: string;
@@ -45,7 +47,8 @@ interface IBannerCard {
     | "default-our-values"
     | "defautl-contact"
     | "default-our-contact"
-    | "default-career";
+    | "default-career"
+    | "defautl-our-career";
 }
 
 import imageOne from "@/app/assets/images/career/one.webp";
@@ -58,19 +61,42 @@ const careerData = [
 ];
 
 const BannerCard = ({ variant }: IBannerCard) =>
-  variant == "defautl-career" ? (
+  variant == "defautl-our-career" ? (
+    <>
+      <div className="relative overflow-hidden  w-full p-10 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          {careerCardData?.map((cardData) => (
+            <div
+              className="flex flex-col justify-center text-white bg-productHives-mainBackground rounded-2xl py-5 px-4"
+              key={cardData.id}
+            >
+              <Image
+                src={cardData.imageUrl && cardData.imageUrl}
+                alt="card_"
+                height={80}
+                width={80}
+                className="p-1"
+              />
+              <h1 className="font-bold text-3xl pt-10">{cardData.title}</h1>
+              <p className="max-w-sm py-4">{cardData.slug}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  ) : variant == "defautl-career" ? (
     <>
       <div className="relative overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {careerData?.map((cardData) => (
             <div
-              className="flex flex-col justify-center text-white bg-productHives-mainBackground rounded-2xl py-14 px-4"
+              className="flex flex-col justify-center rounded-2xl"
               key={cardData.id}
             >
               <Image
                 src={cardData.image && cardData.image}
                 alt="career_card_"
-                className="rounded-2xl"
+                className="rounded-2xl scale-90 "
               />
             </div>
           ))}
@@ -83,14 +109,14 @@ const BannerCard = ({ variant }: IBannerCard) =>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {ourContacts?.map((cardData) => (
             <div
-              className="flex flex-col justify-center text-white bg-productHives-mainBackground rounded-2xl py-14 px-4"
+              className="flex flex-col justify-center text-white bg-productHives-mainBackground rounded-2xl py-5 px-4"
               key={cardData.id}
             >
               <Image
                 src={cardData.imageUrl && cardData.imageUrl}
                 alt="card_"
-                height={100}
-                width={100}
+                height={80}
+                width={80}
                 className="p-1"
               />
               <h1 className="font-bold text-3xl pt-10">{cardData.title}</h1>

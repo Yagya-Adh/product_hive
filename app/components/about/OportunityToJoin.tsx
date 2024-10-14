@@ -5,6 +5,7 @@ import CustomTextBanner from "../banner/CustomTextBanner";
 import opportunityData from "@/opportunityList.json";
 import { ClockIcon, MapPinIcon } from "@heroicons/react/24/outline";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
+import Revenue from "../home/Revenue";
 
 interface IopportunityData {
   id: number;
@@ -61,12 +62,7 @@ const OportunityToJoin = () => {
           </div>
         </div>
         <div className="bg-productHives-mainBackground py-10">
-          <CustomTextBanner
-            preText="Do not find a role you are"
-            highlightText="looking for?"
-            buttonGroup={true}
-            textColor="white"
-          />
+          <Revenue topCardShow="show" />
         </div>
       </div>
     </>

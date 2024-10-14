@@ -19,6 +19,8 @@ const Revenue = ({ topCardShow }: IRevenue) => {
         <CustomTextBanner
           preText="Revenue enablement that"
           highlightText="customers love"
+          textColor="white"
+          buttonGroup={true}
         />
       </div>
     </div>
