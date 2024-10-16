@@ -8,13 +8,40 @@ import CustomTextBanner from "./CustomTextBanner";
 import familyImage from "@/app/assets/images/contact/main/happyFamily.webp";
 import jumpImage from "@/app/assets/images/contact/main/jump.webp";
 import groupImage from "@/app/assets/images/contact/main/groupPicture.webp";
+import clockSVG from "@/app/assets/clock.svg";
+import dropSVG from "@/app/assets/drop.svg";
 
 interface IPageBanner {
-  variant: "home" | "service" | "about" | "contact" | "career";
+  variant:
+    | "home"
+    | "service"
+    | "about"
+    | "contact"
+    | "career"
+    | "career-details";
 }
 
 const PageBanner = ({ variant }: IPageBanner) =>
-  variant === "career" ? (
+  variant === "career-details" ? (
+    <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
+      <CustomTextBanner
+        buttonGroup={true}
+        preText="Senior Management Consultant"
+        description="Senior Management Consultant: Provides expert advice to improve business performance, strategy, and efficiency for organizations."
+      />
+
+      <div className="flex items-center py-2">
+        <h2 className="flex items-center px-4 mx-4">
+          <Image src={clockSVG} alt="time_" className="size-10" />
+          <span>Full time</span>
+        </h2>
+        <p className="flex items-center px-4 mx-4">
+          <Image src={dropSVG} alt="time_" className="size-10" />
+          <span>Remote (USA time zones)</span>
+        </p>
+      </div>
+    </div>
+  ) : variant === "career" ? (
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
       <CustomTextBanner
         buttonGroup={true}
@@ -35,6 +62,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
         buttonGroup={true}
         preText="The customer engagement platform for"
         highlightText="every small business"
+        textColor="white"
       />
     </div>
   ) : variant === "service" ? (

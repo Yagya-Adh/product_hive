@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import ButtonPills from "../button/ButtonPills";
+import bannerLine from "@/app/assets/bannerLine.svg";
+
 interface ICustomTextBanner {
   preText?: string;
   highlightText?: string;
@@ -29,23 +32,26 @@ const CustomTextBanner = ({
     <div className="flex flex-col items-center md:text-center justify-center">
       <div
         className={`${
-          textColor === "white"
+          textColor == "white"
             ? "text-white"
-            : textColor === "dark-green"
+            : textColor == "dark-green"
             ? "text-productHives-mainBackground"
-            : textColor === "light-yellow"
+            : textColor == "light-yellow"
             ? "text-productHives-lightYellow"
             : "text-white"
         } 
 
       md:max-w-screen-96 s p-10 text-4xl lg:text-6xl md:text-center  font-semibold max-w-screen-xl capitalize`}
       >
-        <span className={`text-productHives-TextSecondary`}>
-          {preText ? preText : ""}{" "}
-        </span>
+        <span className="text-white">{preText ? preText : ""}</span>
         <br />
-        <p className="text-productHives-buttonColor ">
+        <p className="text-productHives-buttonColor items-center justify-center flex flex-col ">
           {highlightText ? highlightText : ""}{" "}
+          <Image
+            src={bannerLine}
+            alt="banner_line_"
+            className="z-20 size-20 w-1/2 h-full"
+          />
           <span className={`text-productHives-TextSecondary`}>
             {postText ? postText : ""}
           </span>
@@ -87,8 +93,13 @@ const CustomTextBanner = ({
             {preText ? preText : ""}{" "}
           </span>
           <br />
-          <p className="text-productHives-buttonColor ">
+          <p className="text-productHives-buttonColor items-center justify-center flex flex-col ">
             {highlightText ? highlightText : ""}{" "}
+            <Image
+              src={bannerLine}
+              alt="banner_line_"
+              className="z-20 size-20 w-1/2 h-full"
+            />
             <span className={`text-productHives-TextSecondary`}>
               {postText ? postText : ""}
             </span>
