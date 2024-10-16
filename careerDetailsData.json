@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "title": "About the role",
+    "description": [
+      {
+        "id": 1,
+        "describle": "As a Senior Management Consultant, you will lead project teams to develop and implement strategic plans that drive business improvements for our clients. Your role will involve analyzing complex business challenges, identifying opportunities for growth, and crafting actionable solutions. With your extensive experience in management consulting, you will guide organizations through transformational changes, ensuring that they achieve their strategic objectives and enhance their operational efficiency."
+      },
+      {
+        "id": 2,
+        "describle": "In addition to your leadership responsibilities, you will also be a mentor to junior consultants, helping them to develop their skills and advance their careers. Your ability to build strong relationships with clients and stakeholders will be key to your success in this role. Join us to leverage your leadership skills, make a significant impact, and help shape the future of our clients' businesses."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "In the short term, you will:",
+    "point": [
+      { "id": 1, "slug": "Become familiar with our systems, style & process" },
+      {
+        "id": 2,
+        "slug": "Participate in Continuous Discovery Habits; coaching others on qualitative research."
+      },
+      {
+        "id": 3,
+        "slug": "lead your own discovery & interviews with members to understand pains, gains & Jobs to be done"
+      },
+      {
+        "id": 4,
+        "slug": "Guide research activities to define current member pain points and map ideal future experiences"
+      },
+      {
+        "id": 5,
+        "slug": "Facilitate research by collecting, analyzing, and producing insights to lead the team toward user outcomes"
+      },
+      {
+        "id": 6,
+        "slug": "Collaborate with cross-functional project team groups to support the design & creation of new products and features"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "What you bring to the table:",
+    "point": [
+      {
+        "id": 1,
+        "slug": "4+ years of professional experience with 2+ years of experience in User Research"
+      },
+      {
+        "id": 2,
+        "slug": "Experience in conducting research with a clear understanding of various quantitative and qualitative research methodologies"
+      },
+      {
+        "id": 3,
+        "slug": "Analytical, data-driven, and supremely detail-oriented"
+      },
+      {
+        "id": 4,
+        "slug": "Highly collaborative and empathetic: you love connecting with and helping others, whether they’re users or teammates"
+      },
+      {
+        "id": 5,
+        "slug": "You’re legally authorized to work in the United States and able to work US-hours."
+      },
+      {
+        "id": 6,
+        "slug": "Preferred: Experience with quantitative analysis and data visualization"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Why you might love working here:",
+    "point": [
+      { "id": 1, "slug": "The salary for this role is $139,050 + equity." },
+      {
+        "id": 2,
+        "slug": "100% remote work environment, so go ahead and bring your dog to work or wear your PJ's to the office!"
+      },
+      { "id": 3, "slug": "$500/Quarter Remote Work Stipend" },
+      { "id": 4, "slug": "$75/month Physical & Mental Wellness Stipend" },
+      { "id": 5, "slug": "Open vacation policy, with a 3 week minimum!" },
+      {
+        "id": 6,
+        "slug": "Comprehensive health, vision, dental, and life insurance"
+      },
+      { "id": 7, "slug": "401(k) with a 5% match" },
+      { "id": 8, "slug": "Up to 12-weeks of paid family leave" },
+      { "id": 9, "slug": "No Meeting/Flex Fridays" },
+      {
+        "id": 10,
+        "slug": "Meetup stipend when you cross paths with a co-worker"
+      },
+      { "id": 11, "slug": "Continuing education & development reimbursement" },
+      {
+        "id": 12,
+        "slug": "Yearly team retreat (In March, we went to Charleston. In September, we’re heading to Zion National Park!)"
+      },
+      {
+        "id": 13,
+        "slug": "Challenging problems to solve and an awesome team to collaborate with every single day"
+      }
+    ]
+  }
+]
