@@ -83,7 +83,6 @@ const CustomTextBanner = ({
           <Link href={pathRedirectOne ? pathRedirectOne : "/contact"}>
             <ButtonPills
               padding="px-10"
-              text="Browser All Services"
               variant="button-outline"
               text={buttonGroupTextTwo ? buttonGroupTextTwo : ""}
             />

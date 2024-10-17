@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "heading": "Please Read These Terms Of Use Carefully Before Accessing Or Using This Website.",
+    "description": [
+      {
+        "id": 1,
+        "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut eleifend luctus nulla, id dapibus libero semper vel. Sed sed lectus lacus. Ut sed magna at augue iaculis elementum. Pellentesque efficitur ipsum metus, in fringilla quam tincidunt vel. Nullam sit amet mollis risus. Quisque et enim congue nunc imperdiet elementum. Vestibulum."
+      },
+      {
+        "id": 2,
+        "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus mauris sit amet ipsum posuere, a viverra nisi varius. Praesent quam tellus, auctor ac rutrum ac, maximus in urna. Phasellus in diam vestibulum, mollis nulla et, interdum risus. Sed vel vehicula magna. Donec mollis dui id arcu semper viverra. Etiam pharetra cursus lorem eget scelerisque."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "heading": "General terms",
+    "description": [
+      {
+        "id": 1,
+        "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate nisi bibendum arcu venenatis, ut vestibulum ante efficitur. Nulla a sem dolor. Ut non aliquam erat. Praesent suscipit nec risus sit amet gravida. Aliquam a diam sodales, accumsan ante eu, luctus neque. Donec ac urna laoreet, tempus orci."
+      }
+    ],
+    "pointList": [
+      { "id": 1, "point": "Terms and Conditions" },
+      { "id": 2, "point": "Privacy Policy" },
+      { "id": 3, "point": "Disclaimers" }
+    ]
+  },
+  {
+    "id": 3,
+    "heading": "The results",
+    "description": [
+      {
+        "id": 1,
+        "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt faucibus nunc in tincidunt. Suspendisse lectus eros, venenatis sit amet mollis id, mollis ac eros. Fusce eu placerat purus, in feugiat elit. Nunc pretium orci vitae lacus pulvinar ultrices. Nulla cursus augue in sapien accumsan, a porttitor est."
+      },
+      {
+        "id": 2,
+        "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ligula massa, rutrum et risus at, tempus dapibus enim. Proin semper non nibh in ultricies. Maecenas ut ligula sed odio hendrerit facilisis. Donec efficitur, enim eu pellentesque mollis, dui felis tempus nibh, sed dignissim elit orci vitae velit. Quisque."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "heading": "Overview",
+    "description": [
+      {
+        "id": 1,
+        "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eget diam et erat dictum egestas sit amet et urna. Aliquam pretium auctor lectus. Nunc pulvinar placerat erat ac pulvinar. Suspendisse non posuere leo. Curabitur non porta arcu. Suspendisse feugiat arcu sed nulla viverra, sit amet gravida sapien fermentum."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "heading": "What’s next starts here",
+    "description": [
+      {
+        "id": 1,
+        "describe": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum mattis urna ac tincidunt. Nulla mattis iaculis ante, quis ullamcorper metus pharetra sit amet. Aliquam magna est, tristique sed consequat sed, ullamcorper vitae ex. Mauris sed semper dui. Ut sapien velit, porta eget ultricies at, laoreet at mauris."
+      }
+    ]
+  }
+]

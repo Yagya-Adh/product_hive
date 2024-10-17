@@ -11,18 +11,25 @@ interface IMainBainner {
     | "about"
     | "contact"
     | "career"
-    | "career-details";
+    | "career-details"
+    | "terms-condition";
 }
 const MainBanner = ({ variant }: IMainBainner) =>
-  variant === "career-details" ? (
+  variant === "terms-condition" ? (
+    <>
+      <div className="bg-productHives-mainBackground  pt-10 pb-40 relative">
+        <NavBar />
+        <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
+          <PageBanner variant="terms-condition" />
+        </div>
+      </div>
+    </>
+  ) : variant === "career-details" ? (
     <>
       <div className="bg-productHives-mainBackground  pt-10 pb-40 relative">
         <NavBar />
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
           <PageBanner variant="career-details" />
-          {/* <div className="absolute -bottom-96 ">
-            <BannerCard variant="defautl-career" />
-          </div> */}
         </div>
       </div>
     </>

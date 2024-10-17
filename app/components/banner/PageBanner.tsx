@@ -18,14 +18,34 @@ interface IPageBanner {
     | "about"
     | "contact"
     | "career"
-    | "career-details";
+    | "career-details"
+    | "career-details-footer"
+    | "terms-condition";
 }
 
 const PageBanner = ({ variant }: IPageBanner) =>
-  variant === "career-details" ? (
-    <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
+  variant === "terms-condition" ? (
+    <div className="relative lg:text-center flex flex-col text-white justify-center items-center pt-10 px-10">
+      <CustomTextBanner
+        buttonGroup={false}
+        highlightText="Terms & Conditions"
+        description="Ut nihil porro quo galisum quisquam aut reiciendis praesentium id distinctio dolores? Et quasi dolorem et eius excepturi eum dolore fuga hic fugit maxime."
+      />
+    </div>
+  ) : variant === "career-details-footer" ? (
+    <div className="relative lg:text-center flex flex-col text-white justify-center items-center pt-10 px-10">
       <CustomTextBanner
         buttonGroup={true}
+        buttonGroupText="See More Job!"
+        buttonGroupTextTwo="Book A call"
+        preText="Do not find a role you arel"
+        highlightText="looking for?"
+      />
+    </div>
+  ) : variant === "career-details" ? (
+    <div className="relative lg:text-center flex flex-col text-white justify-center items-center px-10">
+      <CustomTextBanner
+        buttonGroup={false}
         preText="Senior Management Consultant"
         description="Senior Management Consultant: Provides expert advice to improve business performance, strategy, and efficiency for organizations."
       />
