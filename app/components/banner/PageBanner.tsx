@@ -79,7 +79,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
       <div className="hidden lg:flex absolute top-20 left-0  rounded-2xl">
         <Image
           src={familyImage}
-          alt="home_"
+          alt="about_"
           width={150}
           height={100}
           className="  bg-rose-700 rounded-2xl"
@@ -88,7 +88,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
       <div className="hidden lg:flex absolute top-96 left-20  rounded-2xl">
         <Image
           src={groupImage}
-          alt="home_"
+          alt="about_"
           width={150}
           height={100}
           className="  bg-rose-700 rounded-2xl"
@@ -97,7 +97,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
       <div className="hidden lg:flex absolute top-52 right-0  rounded-2xl">
         <Image
           src={jumpImage}
-          alt="home_"
+          alt="about_"
           width={150}
           height={100}
           className="  bg-rose-700 rounded-2xl"

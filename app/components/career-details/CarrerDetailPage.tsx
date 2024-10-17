@@ -1,9 +1,8 @@
 "use client";
-
+import React from "react";
 import careerDetailsData from "@/careerDetailsData.json";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 const data = careerDetailsData;
-import React from "react";
 import ApplyForThisRole from "./ApplyForThisRole";
 
 const CarrerDetailPage = () => {
@@ -11,12 +10,8 @@ const CarrerDetailPage = () => {
     <div className="bg-productHives-colorGrey">
       <div className="mx-auto max-w-screen-2xl px-10 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-40  ">
-          <div>
-            <NoticeSide />
-          </div>
-          <div className="flex justify-center ">
-            <ApplyForThisRole />
-          </div>
+          <NoticeSide />
+          <ApplyForThisRole />
         </div>
       </div>
     </div>

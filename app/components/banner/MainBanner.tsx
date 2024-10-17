@@ -16,7 +16,7 @@ interface IMainBainner {
 const MainBanner = ({ variant }: IMainBainner) =>
   variant === "career-details" ? (
     <>
-      <div className="bg-productHives-mainBackground  pt-10 pb-40 ">
+      <div className="bg-productHives-mainBackground  pt-10 pb-40 relative">
         <NavBar />
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
           <PageBanner variant="career-details" />
@@ -39,29 +39,33 @@ const MainBanner = ({ variant }: IMainBainner) =>
       </div>
     </>
   ) : variant === "contact" ? (
-    <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
-      <div className="max-w-screen-2xl mx-auto px-10 relative pb-40">
+    <>
+      <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
         <NavBar />
-        <PageBanner variant="contact" />
-        <div className="absolute -bottom-96 ">
-          <BannerCard variant="defautl-contact" />
+        <div className="max-w-screen-2xl mx-auto px-10 relative pb-40">
+          <PageBanner variant="contact" />
+          <div className="absolute -bottom-96 ">
+            <BannerCard variant="defautl-contact" />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   ) : variant === "service" ? (
-    <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
-      <div className="max-w-screen-2xl mx-auto px-10 relative ">
+    <>
+      <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
         <NavBar />
-        <PageBanner variant="service" />
-        <div className="absolute -bottom-72">
-          <BannerCard variant="defautl-service" />
+        <div className="max-w-screen-2xl mx-auto px-10 relative ">
+          <PageBanner variant="service" />
+          <div className="absolute -bottom-72">
+            <BannerCard variant="defautl-service" />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   ) : variant === "about" ? (
     <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
+      <NavBar />
       <div className="max-w-screen-2xl mx-auto px-10 relative ">
-        <NavBar />
         <PageBanner variant="about" />
         <div className="absolute -bottom-72">
           <BannerCard variant="defautl-about" />
@@ -70,8 +74,8 @@ const MainBanner = ({ variant }: IMainBainner) =>
     </div>
   ) : variant === "home" ? (
     <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
+      <NavBar />
       <div className="max-w-screen-2xl mx-auto px-10 relative ">
-        <NavBar />
         <PageBanner variant="home" />
         <div className="absolute -bottom-72">
           <BannerCard variant="default-home" />

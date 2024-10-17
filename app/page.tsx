@@ -8,7 +8,6 @@ import Revenue from "./components/home/Revenue";
 export default function Home() {
   return (
     <>
-      {/* <div className="bg-productHives-mainBackground pt-10 pb-40"></div> */}
       <MainBanner variant="home" />
       <ProductOwner />
       <PreSegment />

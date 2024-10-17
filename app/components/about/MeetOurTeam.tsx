@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import ButtonPills from "../button/ButtonPills";
-import ceoImage from "@/app/assets/images/about/meetOurTeams/ceoFounder.webp";
+// import ceoImage from "@/app/assets/images/about/meetOurTeams/ceoFounder.webp";
 import srPatnerImage from "@/app/assets/images/about/meetOurTeams/seniorPartner.webp";
 import srAnalystImage from "@/app/assets/images/about/meetOurTeams/Sranalyst.webp";
 import srAssociateImage from "@/app/assets/images/about/meetOurTeams/SrAssociate.webp";
@@ -36,7 +36,7 @@ export default MeetOurTeam;
 const gridCardData = [
   {
     id: 1,
-    image: ceoImage,
+    image: "/../../assets/images/about/meetOurTeams/seniorPartner.webp",
     name: "Chris Rachuba",
     title: "CEO, Founder",
   },
@@ -64,7 +64,13 @@ const GridImageCard = () => {
     <div className="grid-cols-2 grid gap-10">
       {gridCardData?.map((listGrid) => (
         <div key={listGrid.id}>
-          <Image src={listGrid.image} alt="grid_card_" className="rounded-xl" />
+          <Image
+            src={listGrid.image}
+            alt="grid_card_"
+            width={400}
+            height={400}
+            className="rounded-xl"
+          />
 
           <div className="py-5 text-white">
             <h1 className="text-2xl font-bold">{listGrid.name}</h1>

@@ -9,11 +9,10 @@ import Footer from "./components/footer/Footer";
 import Revenue from "./components/home/Revenue";
 const PageNotFound = () => {
   return (
-    <div className="bg-productHives-colorGrey">
-      <div className="max-w-screen-2xl px-10 mx-auto">
-        <div className="bg-productHives-mainBackground rounded-full">
-          <NavBar />
-        </div>
+    <div className="bg-productHives-colorGrey ">
+      <div className="max-w-screen-2xl px-10 py-5 mx-auto">
+        {/* <div className="bg-productHives-mainBackground rounded-full"></div> */}
+        <NavBar />
 
         <div className="flex justify-center items-center flex-col p-40">
           <Image
