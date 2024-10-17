@@ -20,11 +20,22 @@ interface IPageBanner {
     | "career"
     | "career-details"
     | "career-details-footer"
-    | "terms-condition";
+    | "terms-condition"
+    | "terms-condition-footer";
 }
 
 const PageBanner = ({ variant }: IPageBanner) =>
-  variant === "terms-condition" ? (
+  variant === "terms-condition-footer" ? (
+    <div className="relative lg:text-center flex flex-col text-white justify-center items-center pt-10 px-10">
+      <CustomTextBanner
+        buttonGroup={true}
+        buttonGroupText="Let’s work together!"
+        buttonGroupTextTwo="Book a Call"
+        preText="Revenue enablement that"
+        highlightText="customers love"
+      />
+    </div>
+  ) : variant === "terms-condition" ? (
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center pt-10 px-10">
       <CustomTextBanner
         buttonGroup={false}
