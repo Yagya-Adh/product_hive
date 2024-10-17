@@ -89,25 +89,25 @@ const PageBanner = ({ variant }: IPageBanner) =>
           alt="about_"
           width={150}
           height={100}
-          className="  bg-rose-700 rounded-2xl"
+          className="rounded-2xl"
         />
       </div>
-      <div className="hidden lg:flex absolute top-96 left-20  rounded-2xl">
+      <div className="hidden lg:flex absolute bottom-40 left-0  rounded-2xl">
         <Image
           src={groupImage}
           alt="about_"
           width={150}
           height={100}
-          className="  bg-rose-700 rounded-2xl"
+          className="rounded-2xl"
         />
       </div>
-      <div className="hidden lg:flex absolute top-52 right-0  rounded-2xl">
+      <div className="hidden lg:flex absolute top-64 right-0  rounded-2xl">
         <Image
           src={jumpImage}
           alt="about_"
           width={150}
           height={100}
-          className="  bg-rose-700 rounded-2xl"
+          className="rounded-2xl"
         />
       </div>
 
