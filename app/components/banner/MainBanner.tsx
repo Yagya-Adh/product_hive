@@ -65,7 +65,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
   ) : variant === "about" ? (
     <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
       <NavBar />
-      <div className="max-w-screen-2xl mx-auto px-10 relative ">
+      <div className="max-w-screen-2xl mx-auto px-4 relative ">
         <PageBanner variant="about" />
         <div className="absolute -bottom-72">
           <BannerCard variant="defautl-about" />

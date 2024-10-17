@@ -45,6 +45,8 @@ const PageBanner = ({ variant }: IPageBanner) =>
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
       <CustomTextBanner
         buttonGroup={true}
+        buttonGroupText="Let's Work Together"
+        buttonGroupTextTwo="Book A call"
         preText="Build the future of"
         highlightText="venture capital"
         description="Join our team to advance your career, collaborate on innovative projects, develop cutting-edge solutions, and help businesses achieve their goals."
@@ -60,15 +62,20 @@ const PageBanner = ({ variant }: IPageBanner) =>
       </div>
       <CustomTextBanner
         buttonGroup={true}
+        buttonGroupText="Let's Work Together"
+        buttonGroupTextTwo="Book A call"
         preText="The customer engagement platform for"
         highlightText="every small business"
         textColor="white"
+        description="Boost Your Business with ProductHive - The Ultimate Customer Engagement Platform for Small Businesses."
       />
     </div>
   ) : variant === "service" ? (
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
       <CustomTextBanner
         buttonGroup={true}
+        buttonGroupText="Let's Work Together"
+        buttonGroupTextTwo="Book A call"
         preText="Our versatile business solutions"
         highlightText="& expert services"
         description="Discover our services, from enhancing your digital footprint to developing growth strategies, integrating tech solutions, and offering expert advice for your business&lsquo;s success."
@@ -106,6 +113,8 @@ const PageBanner = ({ variant }: IPageBanner) =>
 
       <CustomTextBanner
         buttonGroup={true}
+        buttonGroupText="Let's Work Together"
+        buttonGroupTextTwo="Book A call"
         preText="Unveiling the Journey of"
         highlightText="about us"
         description="We believe that entrepreneurs are society's problem solvers. They see opportunities in complexities and drive us towards progress"
@@ -117,7 +126,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
         <h5>Contact Us</h5>
       </div>
       <CustomTextBanner
-        buttonGroup={true}
+        buttonGroup={false}
         preText="We're "
         highlightText="here to help"
       />
