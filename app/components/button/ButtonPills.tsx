@@ -56,7 +56,7 @@ const ButtonPills = ({ text, variant, padding }: IPillButtonProps) => {
         <button
           className={`relative rounded-full ${
             padding ? padding : ""
-          }  px-2 mx-2 bg-productHives-buttonColor items-center text-2xl font-bold cursor-pointer overflow-hidden transition-transform duration-300 ease-in-out group`}
+          }   bg-productHives-buttonColor items-center text-2xl font-bold cursor-pointer overflow-hidden transition-transform duration-300 ease-in-out group`}
         >
           <div className="overflow-hidden flex flex-col items-center group">
             <div
