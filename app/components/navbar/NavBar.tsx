@@ -70,7 +70,7 @@ const NavBar = () => {
           </div>
         </div>
         <div
-          className={` z-10 ${
+          className={` z-10 max-w-screen-2xl mx-auto px-4 ${
             !open
               ? " -translate-y-96 transition-all ease-in-out duration-500 bg-none overflow-hidden"
               : "translate-y-1 transition-all ease-in-out duration-500 py-10  rounded-2xl"
