@@ -7,7 +7,6 @@ import MeetOurTeam from "../components/about/MeetOurTeam";
 import SliderBar from "../components/about/SliderBar";
 import MapYourLocation from "../components/about/MapYourLocation";
 import OportunityToJoin from "../components/about/OportunityToJoin";
-import Footer from "../components/footer/Footer";
 
 const AboutPage = () => {
   return (
@@ -20,7 +19,6 @@ const AboutPage = () => {
       <SliderBar />
       <MapYourLocation />
       <OportunityToJoin />
-      <Footer />
     </>
   );
 };

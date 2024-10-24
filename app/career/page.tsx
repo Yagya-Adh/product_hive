@@ -5,7 +5,6 @@ import Benefits from "../components/career/Benefits";
 import JoinUs from "../components/career/JoinUs";
 import OportunityToJoin from "../components/about/OportunityToJoin";
 import SliderBar from "../components/about/SliderBar";
-import Footer from "../components/footer/Footer";
 
 const Career = () => {
   return (
@@ -15,7 +14,6 @@ const Career = () => {
       <Benefits />
       <SliderBar />
       <OportunityToJoin />
-      <Footer />
     </>
   );
 };

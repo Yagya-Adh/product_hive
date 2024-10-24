@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import navLogoImage from "../../assets/homeLogo.svg";
-import footerLogoImage from "../../assets/footerLogo.svg";
+import navLogoImage from "@/public/assets/homeLogo.svg";
+import footerLogoImage from "@/public/assets/footerLogo.svg";
 
 interface IPropFooter {
   logo?: string | "footer" | "nav";

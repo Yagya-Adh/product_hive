@@ -1,6 +1,5 @@
 import MainBanner from "./components/banner/MainBanner";
 import ProductOwner from "./components/banner/ProductOwner";
-import Footer from "./components/footer/Footer";
 import FeautreRequest from "./components/home/FeautreRequest";
 import PreSegment from "./components/home/PreSegment";
 import ProductManagement from "./components/home/ProductManagement";
@@ -14,7 +13,6 @@ export default function Home() {
       <ProductManagement />
       <FeautreRequest />
       <Revenue topCardShow="show" />
-      <Footer />
     </>
   );
 }

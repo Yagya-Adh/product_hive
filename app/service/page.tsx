@@ -1,6 +1,4 @@
-"use client";
 import MainBanner from "../components/banner/MainBanner";
-import Footer from "../components/footer/Footer";
 import FeautreRequest from "../components/home/FeautreRequest";
 import Revenue from "../components/home/Revenue";
 import OurProcess from "../components/service/OurProcess";
@@ -12,10 +10,9 @@ const ServicePage = () => {
       <MainBanner variant="service" />
       <OurService />
       <OurProcess />
-      {/* <OurVlue/> */}
+      {/* <OurValue/> */}
       <FeautreRequest />
       <Revenue topCardShow="show" />
-      <Footer />
     </>
   );
 };

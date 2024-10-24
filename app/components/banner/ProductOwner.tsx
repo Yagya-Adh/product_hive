@@ -1,19 +1,14 @@
 "use client";
-import Image, { StaticImageData } from "next/image";
-import defineVision from "@/app/assets/images/product_owner/define.svg";
-import customerSatisfraction from "@/app/assets/images/product_owner/customer.svg";
-import measureSuccess from "@/app/assets/images/product_owner/measure.svg";
+import Image from "next/image";
+import productOwnerData from "@/productOwnerData.json";
 
 interface IProductOwnerData {
   id: number;
   title: string;
-  image: StaticImageData;
+  image: string;
 }
-const ProductOwnerData: IProductOwnerData[] = [
-  { id: 1, title: "Defining the Vision", image: defineVision },
-  { id: 2, title: "Customer satisfaction", image: customerSatisfraction },
-  { id: 3, title: "Measure Success", image: measureSuccess },
-];
+const ProductOwnerData: IProductOwnerData[] = productOwnerData;
+
 const ProductOwner = () => {
   return (
     <>

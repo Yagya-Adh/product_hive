@@ -1,15 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import personOne from "@/app/assets/images/home/hero.webp";
-import personTwo from "@/app/assets/images/home/heroin.webp";
+/* /assets/images/home/hero.webp */
 import CustomTextBanner from "./CustomTextBanner";
 
-import familyImage from "@/app/assets/images/contact/main/happyFamily.webp";
-import jumpImage from "@/app/assets/images/contact/main/jump.webp";
-import groupImage from "@/app/assets/images/contact/main/groupPicture.webp";
-import clockSVG from "@/app/assets/clock.svg";
-import dropSVG from "@/app/assets/drop.svg";
+import clockSVG from "@/app";
+import dropSVG from "@/app";
 
 interface IPageBanner {
   variant:
@@ -63,11 +59,11 @@ const PageBanner = ({ variant }: IPageBanner) =>
 
       <div className="flex items-center py-2">
         <h2 className="flex items-center px-4 mx-4">
-          <Image src={clockSVG} alt="time_" className="size-10" />
+          <Image src="/assets/clock.svg" alt="time_" className="size-10" />
           <span>Full time</span>
         </h2>
         <p className="flex items-center px-4 mx-4">
-          <Image src={dropSVG} alt="time_" className="size-10" />
+          <Image src="/assets/drop.svg" alt="time_" className="size-10" />
           <span>Remote (USA time zones)</span>
         </p>
       </div>
@@ -86,10 +82,18 @@ const PageBanner = ({ variant }: IPageBanner) =>
   ) : variant === "home" ? (
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
       <div className="hidden lg:flex absolute top-10 left-20 overflow-hidden rounded-full">
-        <Image src={personOne} alt="home_" className="size-48" />
+        <Image
+          src="/assets/images/home/hero.webp"
+          alt="home_"
+          className="size-48"
+        />
       </div>
       <div className="hidden lg:flex absolute bottom-10 right-20 overflow-hidden rounded-full">
-        <Image src={personTwo} alt="home_" className="size-48" />
+        <Image
+          src="/assets/images/home/heroin.webp"
+          alt="home_"
+          className="size-48"
+        />
       </div>
       <CustomTextBanner
         buttonGroup={true}
@@ -116,7 +120,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center p-10 py-40">
       <div className="hidden lg:flex absolute top-20 left-0  rounded-2xl">
         <Image
-          src={familyImage}
+          src="/assets/images/contact/main/happyFamily.webp"
           alt="about_"
           width={150}
           height={100}
@@ -125,7 +129,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
       </div>
       <div className="hidden lg:flex absolute bottom-40 left-0  rounded-2xl">
         <Image
-          src={groupImage}
+          src="/assets/images/contact/main/groupPicture.webp"
           alt="about_"
           width={150}
           height={100}
@@ -134,7 +138,7 @@ const PageBanner = ({ variant }: IPageBanner) =>
       </div>
       <div className="hidden lg:flex absolute top-64 right-0  rounded-2xl">
         <Image
-          src={jumpImage}
+          src="/assets/images/contact/main/jump.webp"
           alt="about_"
           width={150}
           height={100}

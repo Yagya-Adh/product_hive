@@ -1,12 +1,31 @@
-"use client";
-
 import Image from "next/image";
 import ButtonPills from "../button/ButtonPills";
-// import ceoImage from "@/app/assets/images/about/meetOurTeams/ceoFounder.webp";
-import srPatnerImage from "@/app/assets/images/about/meetOurTeams/seniorPartner.webp";
-import srAnalystImage from "@/app/assets/images/about/meetOurTeams/Sranalyst.webp";
-import srAssociateImage from "@/app/assets/images/about/meetOurTeams/SrAssociate.webp";
-
+const gridCardData = [
+  {
+    id: 1,
+    image: "/assets/images/about/meetOurTeams/seniorPartner.webp",
+    name: "Chris Rachuba",
+    title: "CEO, Founder",
+  },
+  {
+    id: 2,
+    image: "/assets/images/about/meetOurTeams/seniorPartner.webp",
+    name: "Colleen Baum",
+    title: "Senior Partner",
+  },
+  {
+    id: 3,
+    image: "/assets/images/about/meetOurTeams/Sranalyst.webp",
+    name: "Aditya Sanghvi",
+    title: "Senior Analyst",
+  },
+  {
+    id: 4,
+    image: "/assets/images/about/meetOurTeams/SrAssociate.webp",
+    name: "Rob Palter",
+    title: "Senior Associate",
+  },
+];
 const MeetOurTeam = () => {
   return (
     <div className="bg-productHives-mainBackground">
@@ -33,32 +52,6 @@ const MeetOurTeam = () => {
 
 export default MeetOurTeam;
 
-const gridCardData = [
-  {
-    id: 1,
-    image: "/../../assets/images/about/meetOurTeams/seniorPartner.webp",
-    name: "Chris Rachuba",
-    title: "CEO, Founder",
-  },
-  {
-    id: 2,
-    image: srPatnerImage,
-    name: "Colleen Baum",
-    title: "Senior Partner",
-  },
-  {
-    id: 3,
-    image: srAnalystImage,
-    name: "Aditya Sanghvi",
-    title: "Senior Analyst",
-  },
-  {
-    id: 4,
-    image: srAssociateImage,
-    name: "Rob Palter",
-    title: "Senior Associate",
-  },
-];
 const GridImageCard = () => {
   return (
     <div className="grid-cols-2 grid gap-10">

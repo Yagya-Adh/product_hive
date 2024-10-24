@@ -1,5 +1,4 @@
 "use client";
-import NavBar from "@/app/components/navbar/NavBar";
 import PageBanner from "./PageBanner";
 import BannerCard from "../card/BannerCard";
 
@@ -7,6 +6,7 @@ interface IMainBainner {
   variant?:
     | string
     | "service"
+    | "blog"
     | "home"
     | "about"
     | "contact"
@@ -17,8 +17,7 @@ interface IMainBainner {
 const MainBanner = ({ variant }: IMainBainner) =>
   variant === "terms-condition" ? (
     <>
-      <div className="bg-productHives-mainBackground  pt-10 pb-40 relative">
-        <NavBar />
+      <div className="bg-productHives-mainBackground    relative">
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
           <PageBanner variant="terms-condition" />
         </div>
@@ -26,8 +25,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
     </>
   ) : variant === "career-details" ? (
     <>
-      <div className="bg-productHives-mainBackground  pt-10 pb-40 relative">
-        <NavBar />
+      <div className="bg-productHives-mainBackground    relative">
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
           <PageBanner variant="career-details" />
         </div>
@@ -35,8 +33,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
     </>
   ) : variant === "career" ? (
     <>
-      <div className="bg-productHives-mainBackground pt-10 pb-40 ">
-        <NavBar />
+      <div className="bg-productHives-mainBackground   ">
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
           <PageBanner variant="career" />
           <div className="absolute -bottom-96 ">
@@ -47,8 +44,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
     </>
   ) : variant === "contact" ? (
     <>
-      <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
-        <NavBar />
+      <div className="bg-productHives-mainBackground   flex flex-col">
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40">
           <PageBanner variant="contact" />
           <div className="absolute -bottom-96 ">
@@ -59,8 +55,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
     </>
   ) : variant === "service" ? (
     <>
-      <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
-        <NavBar />
+      <div className="bg-productHives-mainBackground   flex flex-col">
         <div className="max-w-screen-2xl mx-auto px-10 relative ">
           <PageBanner variant="service" />
           <div className="absolute -bottom-72">
@@ -70,8 +65,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
       </div>
     </>
   ) : variant === "about" ? (
-    <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
-      <NavBar />
+    <div className="bg-productHives-mainBackground   flex flex-col">
       <div className="max-w-screen-2xl mx-auto px-4 relative ">
         <PageBanner variant="about" />
         <div className="absolute -bottom-72">
@@ -80,8 +74,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
       </div>
     </div>
   ) : variant === "home" ? (
-    <div className="bg-productHives-mainBackground pt-10 pb-40 flex flex-col">
-      <NavBar />
+    <div className="bg-productHives-mainBackground   flex flex-col">
       <div className="max-w-screen-2xl mx-auto px-10 relative ">
         <PageBanner variant="home" />
         <div className="absolute -bottom-72">

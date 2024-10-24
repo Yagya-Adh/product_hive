@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import worldMap from "@/app/assets/images/map/worldmap.png";
 import ButtonPills from "../button/ButtonPills";

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "title": "Defining the Vision",
+    "image": "/assets/images/product_owner/define.svg"
+  },
+  {
+    "id": 2,
+    "title": "Customer satisfaction",
+    "image": "/assets/images/product_owner/customer.svg"
+  },
+  {
+    "id": 3,
+    "title": "Measure Success",
+    "image": "/assets/images/product_owner/measure.svg"
+  }
+]

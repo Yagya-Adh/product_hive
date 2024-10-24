@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import ButtonPills from "../button/ButtonPills";
-import bannerLine from "@/app/assets/bannerLine.svg";
 
 interface ICustomTextBanner {
   preText?: string;
@@ -62,7 +61,7 @@ const CustomTextBanner = ({
         <p className="text-productHives-buttonColor items-center justify-center flex flex-col ">
           {highlightText ? highlightText : ""}{" "}
           <Image
-            src={bannerLine}
+            src="/assets/bannerLine.svg"
             alt="banner_line_"
             className="z-20 size-20 w-1/2 h-full"
           />

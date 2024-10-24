@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import CustomTextBanner from "../banner/CustomTextBanner";
 import opportunityData from "@/opportunityList.json";
 import { ClockIcon, MapPinIcon } from "@heroicons/react/24/outline";

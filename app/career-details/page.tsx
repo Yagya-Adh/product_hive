@@ -12,7 +12,6 @@ const CareerDetails = () => {
       <MainBanner variant="career-details" />
       <CarrerDetailPage />
       <DoNotFind />
-      <Footer />
     </>
   );
 };
