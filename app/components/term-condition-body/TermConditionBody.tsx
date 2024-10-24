@@ -16,10 +16,10 @@ const dataObserve = [
 
 const TermConditionBody = () => {
   return (
-    <div className="bg-productHives-ProductOwner text-productHives-mainBackground">
+    <div className="bg-productHives-ProductOwner text-productHives-mainBackground py-20">
       <div className="mx-auto max-w-screen-2xl">
         <div className="grid grid-cols-2 relative gap-2">
-          <div className=" w-2/3 bg-white rounded-xl p-10 relative">
+          <div className="w-2/3 bg-white rounded-xl p-10 relative">
             <div className="sticky top-10 bg-productHives-lightYellow p-10 rounded-2xl">
               {dataObserve?.map((list) => (
                 <ul className="flex flex-col " key={list.id}>
@@ -33,11 +33,11 @@ const TermConditionBody = () => {
             </div>
           </div>
 
-          <div className="w-full py-10">
+          <div className="py-10">
             {termsConditionData?.map((list) => (
               <div
                 key={list.id}
-                className="border-b border-t border-productHives-lightYellow"
+                className="border-b border-t border-productHives-lightYellow w-full"
               >
                 <h1 className="text-4xl py-5 font-bold">{list.heading}</h1>
 
