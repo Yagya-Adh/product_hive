@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import ArrowButton from "../button/ArrowButton";
-import emilyImage from "@/app/assets/images/slider/emilyImage.png";
-import doubleCot from "@/app/assets/images/slider/coat.svg";
 const SliderCard = () => {
   const clickHandle = () => {
     return alert("click");
@@ -17,7 +15,13 @@ const SliderCard = () => {
         </p>
         <div className="flex flex-col justify-center items-end">
           <div className="bg-productHives-buttonColor rounded-full flex  items-start">
-            <Image src={emilyImage} alt="slider_" className="" />
+            <Image
+              src="/assets/images/slider/emilyImage.png"
+              alt="slider_"
+              className="object-cover object-center"
+              width={400}
+              height={400}
+            />
           </div>
         </div>
       </div>
@@ -32,7 +36,13 @@ const SliderCard = () => {
       </div>
       <div className="grid grid-cols-2 items-center px-10 relative overflow-hidden z-20 ">
         <div className="flex items-center relative ">
-          <Image src={doubleCot} alt="DoubkeCot_" className="mx-2" />
+          <Image
+            src="/assets/images/slider/coat.svg"
+            alt="DoubkeCot_"
+            className="mx-2"
+            width={400}
+            height={400}
+          />
           <h1 className="text-productHives-TextSecondary font-bold text-3xl flex flex-col items-center">
             Emily Johnson
             <span className="font-light text-2xl">Marketing Director</span>

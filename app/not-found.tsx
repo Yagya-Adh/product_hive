@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import fourOFourPageNotFoundImage from "@/app/assets/404-pageNOtFound.svg";
 import CustomTextBanner from "./components/banner/CustomTextBanner";
 import ButtonPills from "./components/button/ButtonPills";
 import Revenue from "./components/home/Revenue";
@@ -13,10 +12,13 @@ const PageNotFound = () => {
 
         <div className="flex justify-center items-center flex-col p-40">
           <Image
-            src={fourOFourPageNotFoundImage}
+            src="/assets/404-pageNOtFound.svg"
             alt="404_page_not_found"
-            className=""
+            height={400}
+            width={400}
+            className="w-full h-full"
           />
+
           <CustomTextBanner
             preText=""
             highlightText="We lost "

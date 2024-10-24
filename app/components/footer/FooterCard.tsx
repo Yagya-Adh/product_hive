@@ -1,24 +1,14 @@
 "use client";
-
-import Image, { StaticImageData } from "next/image";
-import letsTalkImage from "../../assets/images/footer/talk.webp";
-import facebook from "../../assets/images/social/facebook.svg";
-import xsvgLogo from "../../assets/images/social/x-social.svg";
-import linkedin from "../../assets/images/social/linkedin.svg";
-import instagram from "../../assets/images/social/instagram.svg";
-
-import messageIcon from "../../assets/images/icons/message.svg";
-import callIcon from "../../assets/images/icons/call.svg";
-import dropIcon from "../../assets/images/icons/drop.svg";
-
+import Image from "next/image";
+import footerCardData from "@/footerCardData.json";
 interface Icommon {
   id: number;
   text: string;
-  icon: StaticImageData;
+  icon: string;
 }
 interface Isocial {
   id: number;
-  mean: StaticImageData;
+  mean: string;
 }
 
 interface IcartData {
@@ -27,23 +17,7 @@ interface IcartData {
   social: Isocial[];
   common: Icommon[];
 }
-const cardData: IcartData[] = [
-  {
-    id: 1,
-    title: "Let's Talk",
-    social: [
-      { id: 1, mean: facebook },
-      { id: 2, mean: xsvgLogo },
-      { id: 3, mean: linkedin },
-      { id: 4, mean: instagram },
-    ],
-    common: [
-      { id: 1, text: "hello@product-hive.com", icon: messageIcon },
-      { id: 2, text: "+01222 222 222", icon: callIcon },
-      { id: 3, text: "Edmonton, Canada", icon: dropIcon },
-    ],
-  },
-];
+const cardData: IcartData[] = footerCardData;
 const FooterCard = () => {
   return (
     <div className="rounded-xl overflow-hidden bg-productHives-lightYellow  relative z-30">
@@ -61,6 +35,8 @@ const FooterCard = () => {
                   <Image
                     src={commonList.icon}
                     alt="icons_"
+                    width={120}
+                    height={120}
                     className="size-7 z-10"
                   />
                   <p className="p-1">{commonList.text}</p>
@@ -77,7 +53,13 @@ const FooterCard = () => {
                 ))}
               </div>
             </div>
-            <Image src={letsTalkImage} alt="card_image_" className="z-20" />
+            <Image
+              src="/assets/images/footer/talk.webp"
+              alt="card_image_"
+              className="z-20"
+              width={120}
+              height={120}
+            />
           </div>
         ))}
       </div>

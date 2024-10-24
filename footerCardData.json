@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Let's Talk",
+    "social": [
+      { "id": 1, "mean": "/assets/images/social/facebook.svg" },
+      { "id": 2, "mean": "/assets/images/social/x-social.svg" },
+      { "id": 3, "mean": "/assets/images/social/linkedin.svg" },
+      { "id": 4, "mean": "/assets/images/social/instagram.svg" }
+    ],
+    "common": [
+      {
+        "id": 1,
+        "text": "hello@product-hive.com",
+        "icon": "/assets/images/icons/message.svg"
+      },
+      {
+        "id": 2,
+        "text": "+01222 222 222",
+        "icon": "/assets/images/icons/call.svg"
+      },
+      {
+        "id": 3,
+        "text": "Edmonton, Canada",
+        "icon": "/assets/images/icons/drop.svg"
+      }
+    ]
+  }
+]
