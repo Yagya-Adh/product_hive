@@ -1,7 +1,7 @@
 import MainBanner from "./components/banner/MainBanner";
 import ProductOwner from "./components/banner/ProductOwner";
 import FeautreRequest from "./components/home/FeautreRequest";
-import PreSegment from "./components/home/PreSegment";
+import HomeCardGroup from "./components/home/HomeCardGroup";
 import ProductManagement from "./components/home/ProductManagement";
 import Revenue from "./components/home/Revenue";
 export default function Home() {
@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <MainBanner variant="home" />
       <ProductOwner />
-      <PreSegment />
+      <HomeCardGroup />
       <ProductManagement />
       <FeautreRequest />
       <Revenue topCardShow="show" />

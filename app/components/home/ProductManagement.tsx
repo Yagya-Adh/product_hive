@@ -36,9 +36,9 @@ const productData = [
 ];
 const ProductManagement = () => {
   return (
-    <div className="bg-productHives-mainBackground ">
+    <section className="bg-productHives-mainBackground ">
       <div className="mx-auto max-w-screen-2xl px-5 py-40">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10  py-20 px-10 items-center">
+        <article className="grid grid-cols-1 md:grid-cols-2 gap-10  py-20 px-10 items-center">
           <h1 className="text-6xl text-white">
             Why you should choose our{" "}
             <span className="text-productHives-buttonColor">
@@ -52,7 +52,7 @@ const ProductManagement = () => {
             skills. Not only do they deliver but they uplift your entire
             organization as they go:
           </p>
-        </div>
+        </article>
         <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl gap-10 overflow-hidden items-center">
           {productData?.map((product) => (
             <div
@@ -77,7 +77,7 @@ const ProductManagement = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

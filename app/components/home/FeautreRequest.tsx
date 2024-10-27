@@ -1,8 +1,22 @@
 "use client";
 import Image from "next/image";
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
+const dataFeautre = [
+  {
+    id: 1,
+    question: "We connect our customers with the best?",
+    describe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eos, cumque quibusdam quam praesentium possimus, at repudiandae modi labore quos perspiciatis illo harum laudantium architecto doloremque consequatur est accusantium quia.",
+  },
+  {
+    id: 2,
+    question: "We connect our customers with the best?",
+    describe:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eos, cumque quibusdam quam praesentium possimus, at repudiandae modi labore quos perspiciatis illo harum laudantium architecto doloremque consequatur est accusantium quia.",
+  },
+];
 const FeautreRequest = () => {
   return (
     <section className="max-w-screen-2xl mx-auto px-10 pt-40 pb-80">
@@ -46,21 +60,6 @@ const FeautreRequestCard = () => {
   );
 };
 
-const dataFeautre = [
-  {
-    id: 1,
-    question: "We connect our customers with the best?",
-    describe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eos, cumque quibusdam quam praesentium possimus, at repudiandae modi labore quos perspiciatis illo harum laudantium architecto doloremque consequatur est accusantium quia.",
-  },
-  {
-    id: 2,
-    question: "We connect our customers with the best?",
-    describe:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eos, cumque quibusdam quam praesentium possimus, at repudiandae modi labore quos perspiciatis illo harum laudantium architecto doloremque consequatur est accusantium quia.",
-  },
-];
-
 const FeautreBodyGroup = () => {
   const [isShowID, setIsShowID] = useState<number | null>(null);
 
@@ -70,43 +69,61 @@ const FeautreBodyGroup = () => {
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-10">
-        <div className="p-10 text-5xl font-bold  h-full">
+        <article className="p-10 text-5xl font-bold  h-full">
           We connect our{" "}
           <span className="text-productHives-buttonColor">
             {" "}
             customers with the best
           </span>
           , and help them keep up-and stay open.
-        </div>
-        <div className="p-10 py-10">
+        </article>
+        <aside className="p-10 py-10">
           {dataFeautre?.map((feautre) => (
-            <div
+            <article
               className="border-b-2 border-b-gray-200 w-full"
               key={feautre.id}
             >
-              <div
-                className="flex justify-between items-center py-4 transition-all ease-in-out duration-500 transform"
+              <summary
+                className="
+                flex
+                justify-between
+                items-center
+                py-4 
+                transition-all 
+                ease-in-out 
+                duration-500 
+                transform
+                "
                 onClick={() => handleShow(feautre.id)}
               >
-                <h1 className="font-bold">{feautre.question}</h1>{" "}
-                {isShowID === feautre.id ? (
-                  <div className="bg-productHives-buttonColor rounded-full transition-all ease-in-out duration-500 transform">
-                    <ChevronUpIcon className="size-7" />
-                  </div>
-                ) : (
-                  <div className="bg-productHives-buttonColor rounded-full transition-all ease-in-out duration-500 transform">
-                    <ChevronDownIcon className="size-7" />
-                  </div>
-                )}
-              </div>
+                <h1 className="font-bold text-xl">{feautre.question}</h1>{" "}
+                <div
+                  className={`
+                    bg-productHives-buttonColor
+                    rounded-full
+                    transition-all
+                    ease-in-out
+                    duration-500
+                    transform
+                    
+                    ${
+                      isShowID === feautre.id
+                        ? "rotate-180 transition-rotate ease-linear duration-500 transform"
+                        : "transition-rotate ease-linear duration-500 "
+                    }
+                         `}
+                >
+                  <ChevronDownIcon className="size-7" />
+                </div>
+              </summary>
               {isShowID === feautre.id && (
-                <p className="py-4 transition-all ease-in-out duration-500 transform">
+                <p className="py-4 text-xl font-sans transition-all ease-in-out duration-500 transform">
                   {feautre.describe}
                 </p>
               )}
-            </div>
+            </article>
           ))}
-        </div>
+        </aside>
       </div>
     </div>
   );
