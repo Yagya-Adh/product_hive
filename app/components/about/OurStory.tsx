@@ -1,7 +1,6 @@
 "use client";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import ourStroyImage from "@/app/assets/images/about/ourStoryImage.webp";
 
 interface ICardArray {
   before?: string;
@@ -51,10 +50,16 @@ const cardListData: ICardListData[] = [
 
 const OurStory = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-10 py-40">
+    <div className="max-w-screen-2xl mx-auto px-10 py-60">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-20 bg-white py-10">
         <div className="overflow-hidden rounded-2xl bg-productHives-mainBackground">
-          <Image src={ourStroyImage} className="scale-90" alt="presegment_" />
+          <Image
+            src="/assets/images/about/ourStoryImage.webp"
+            height={600}
+            width={600}
+            className="scale-90"
+            alt="presegment_"
+          />
         </div>
         <div className="p-10">
           <StoryCardText />

@@ -1,5 +1,4 @@
 import Image from "next/image";
-import worldMap from "@/app/assets/images/map/worldmap.png";
 import ButtonPills from "../button/ButtonPills";
 const MapYourLocation = () => {
   return (
@@ -19,7 +18,12 @@ const MapYourLocation = () => {
           </div>
 
           <div>
-            <Image src={worldMap} alt="world_map_" className="" />
+            <Image
+              src="/assets/images/map/worldmap.png"
+              alt="world_map_"
+              width={200}
+              height={200}
+            />
           </div>
         </div>
       </div>

@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import ourTeam from "@/app/assets/images/about/ourTeamVideo.webp";
 
 const OurTeam = () => {
   return (
@@ -32,7 +31,13 @@ const OurHeading = () => {
 const VideoSection = () => {
   return (
     <div className="relative  scale-90">
-      <Image src={ourTeam} alt="our_team" className="rounded-3xl" />
+      <Image
+        src="/assets/images/about/ourTeamVideo.webp"
+        height={600}
+        width={600}
+        alt="our_team"
+        className="rounded-3xl w-full"
+      />
       <div className="absolute text-white font-bold bottom-10 left-10">
         <h1 className="text-6xl">“Top-notch counsel!”</h1>
         <h5 className="text-xl">- Shezan, Resecure</h5>

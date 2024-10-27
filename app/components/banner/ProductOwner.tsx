@@ -12,7 +12,7 @@ const ProductOwner = () => {
   return (
     <>
       <section className="bg-productHives-ProductOwner">
-        <div className="max-w-screen-2xl mx-auto py-40 px-10">
+        <div className="max-w-screen-2xl mx-auto py-60 px-10">
           <article className="flex items-center">
             <h1 className="text-6xl max-w-screen-xl font-semibold capitalize text-center py-20 px-10 mx-auto">
               Product owner is a key to

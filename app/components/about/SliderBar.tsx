@@ -1,23 +1,18 @@
 "use client";
 import Marquee from "react-fast-marquee";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import CustomTextBanner from "../banner/CustomTextBanner";
-import girlsGroupImage from "@/app/assets/images/about/slide/girlsgroup.webp";
-import gatherImage from "@/app/assets/images/about/slide/gather.webp";
-import randomImage from "@/app/assets/images/about/slide/random.webp";
-import tableImage from "@/app/assets/images/about/slide/table.webp";
-import talkImage from "@/app/assets/images/about/slide/talk.webp";
 
 interface IslideData {
   id: number;
-  image: StaticImageData;
+  image: string;
 }
 const slideData: IslideData[] = [
-  { id: 1, image: girlsGroupImage },
-  { id: 2, image: gatherImage },
-  { id: 3, image: randomImage },
-  { id: 4, image: tableImage },
-  { id: 5, image: talkImage },
+  { id: 1, image: "/assets/images/about/slide/girlsgroup.webp" },
+  { id: 2, image: "/assets/images/about/slide/gather.webp" },
+  { id: 3, image: "/assets/images/about/slide/random.webp" },
+  { id: 4, image: "/assets/images/about/slide/table.webp" },
+  { id: 5, image: "/assets/images/about/slide/talk.webp" },
 ];
 
 const SliderBar = () => {
@@ -52,6 +47,8 @@ const SlideCard = () => {
             src={slideing.image}
             alt="slide_"
             key={slideing.id}
+            height={400}
+            width={400}
             className="rounded-2xl mx-2"
           />
         ))}

@@ -20,7 +20,6 @@ const Revenue = ({ topCardShow }: IRevenue) => {
           highlightText="customers love"
           textColor="white"
           buttonGroup={true}
-          // variant="career"
         />
       </div>
     </div>

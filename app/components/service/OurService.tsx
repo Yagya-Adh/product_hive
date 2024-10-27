@@ -2,10 +2,6 @@
 
 import Image from "next/image";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/solid";
-import businessOneImage from "@/app/assets/images/service/busniessOne.webp";
-import businessTwoImage from "@/app/assets/images/service/businessTwo.png";
-import digitalImage from "@/app/assets/images/service/digital.webp";
-import technologyImage from "@/app/assets/images/service/technology.webp";
 import PageTextHeading from "../banner/PageTextHeading";
 const gridCardGroup = [
   {
@@ -14,7 +10,7 @@ const gridCardGroup = [
     head: "Optimize Your Business Strategy",
     describe:
       "Leverage data-driven insights, agile methods, and customer-centric approaches for optimal business strategies.",
-    imageUrl: businessOneImage,
+    imageUrl: "/assets/aegims / service / busniessOne.webp",
     bgColor: "bg-[#102c24]",
   },
   {
@@ -23,7 +19,7 @@ const gridCardGroup = [
     head: "Navigate Markets Effectively",
     describe:
       "Analyze trends, adapt swiftly, and prioritize customer needs for effective market navigation.",
-    imageUrl: businessTwoImage,
+    imageUrl: "/assets/images/service/businessTwo.png",
     bgColor: "bg-[#46e696]",
   },
   {
@@ -32,7 +28,7 @@ const gridCardGroup = [
     head: "Boost Your Online Presence",
     describe:
       "Leverage SEO, engaging content, and social media for a robust online presence and increased visibility.",
-    imageUrl: digitalImage,
+    imageUrl: "/assets/images/service/digital.webp",
     bgColor: "bg-[#efebe0]",
   },
   {
@@ -41,7 +37,7 @@ const gridCardGroup = [
     head: "Innovative Tech Solutions",
     describe:
       "Harness emerging technologies creatively to solve problems and drive efficiency in your business operations.",
-    imageUrl: technologyImage,
+    imageUrl: "/assets/images/service/technology.webp",
     bgColor: "bg-[#46e696]",
   },
 ];

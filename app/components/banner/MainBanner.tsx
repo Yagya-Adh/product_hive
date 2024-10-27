@@ -17,71 +17,71 @@ interface IMainBainner {
 const MainBanner = ({ variant }: IMainBainner) =>
   variant === "terms-condition" ? (
     <>
-      <div className="bg-productHives-mainBackground    relative">
+      <section className="bg-productHives-mainBackground    relative">
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
           <PageBanner variant="terms-condition" />
         </div>
-      </div>
+      </section>
     </>
   ) : variant === "career-details" ? (
     <>
-      <div className="bg-productHives-mainBackground    relative">
+      <section className="bg-productHives-mainBackground    relative">
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
           <PageBanner variant="career-details" />
         </div>
-      </div>
+      </section>
     </>
   ) : variant === "career" ? (
     <>
-      <div className="bg-productHives-mainBackground   ">
+      <section className="bg-productHives-mainBackground   ">
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
           <PageBanner variant="career" />
           <div className="absolute -bottom-96 ">
             <BannerCard variant="defautl-career" />
           </div>
         </div>
-      </div>
+      </section>
     </>
   ) : variant === "contact" ? (
     <>
-      <div className="bg-productHives-mainBackground   flex flex-col">
+      <section className="bg-productHives-mainBackground   flex flex-col">
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40">
           <PageBanner variant="contact" />
           <div className="absolute -bottom-96 ">
             <BannerCard variant="defautl-contact" />
           </div>
         </div>
-      </div>
+      </section>
     </>
   ) : variant === "service" ? (
     <>
-      <div className="bg-productHives-mainBackground   flex flex-col">
+      <section className="bg-productHives-mainBackground   flex flex-col">
         <div className="max-w-screen-2xl mx-auto px-10 relative ">
           <PageBanner variant="service" />
           <div className="absolute -bottom-72">
             <BannerCard variant="defautl-service" />
           </div>
         </div>
-      </div>
+      </section>
     </>
   ) : variant === "about" ? (
-    <div className="bg-productHives-mainBackground   flex flex-col">
+    <section className="bg-productHives-mainBackground   flex flex-col">
       <div className="max-w-screen-2xl mx-auto px-4 relative ">
         <PageBanner variant="about" />
-        <div className="absolute -bottom-72">
+        <div className="absolute -bottom-72 w-full">
           <BannerCard variant="defautl-about" />
         </div>
       </div>
-    </div>
+    </section>
   ) : variant === "home" ? (
-    <div className="bg-productHives-mainBackground   flex flex-col">
+    <section className="bg-productHives-mainBackground   flex flex-col">
       <div className="max-w-screen-2xl mx-auto px-10 relative ">
         <PageBanner variant="home" />
         <div className="absolute -bottom-72">
           <BannerCard variant="default-home" />
         </div>
       </div>
-    </div>
+    </section>
   ) : null;
 
 export default MainBanner;

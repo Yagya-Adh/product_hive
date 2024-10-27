@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
 import CustomTextBanner from "../banner/CustomTextBanner";
-import seeUsInRealImage from "@/app/assets/images/contact/seeUsInReal.webp";
 import seeUsContactData from "@/seeUsContact.json";
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
 interface IseeUsData {
@@ -30,7 +29,7 @@ const SeeUsInReal = () => {
           buttonGroup={false}
           preText="See us in real life"
           textColor="dark-green"
-          discription="Visit our office to discuss your needs, explore our services in person, meet our expert team, and discover how we can help your business thrive."
+          description="Visit our office to discuss your needs, explore our services in person, meet our expert team, and discover how we can help your business thrive."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -44,11 +43,19 @@ const SeeUsInReal = () => {
                   <h1 className="text-3xl font-bold py-4  w-full cursor-pointer">
                     {listing.location}
                   </h1>
-                  {showID === listing.id ? (
-                    <ChevronUpIcon className="size-8 text-white bg-productHives-buttonColor rounded-full p-1" />
-                  ) : (
-                    <ChevronDownIcon className="size-8 text-white bg-productHives-buttonColor rounded-full p-1" />
-                  )}
+                  <ChevronDownIcon
+                    className={`
+                        size-8
+                        text-white
+                        bg-productHives-buttonColor
+                        rounded-full p-1
+                      ${
+                        showID === listing.id
+                          ? "transition-all ease-linear rotate-180 duration-500"
+                          : "transition-all duration-500"
+                      }
+                      `}
+                  />
                 </div>
                 {showID === listing.id && (
                   <div>
@@ -62,9 +69,11 @@ const SeeUsInReal = () => {
           </div>
           <div>
             <Image
-              src={seeUsInRealImage}
+              src="/assets/images/contact/seeUsInReal.webp"
               alt="see_us_"
               className="rounded-2xl scale-75"
+              height={200}
+              width={200}
             />
           </div>
         </div>

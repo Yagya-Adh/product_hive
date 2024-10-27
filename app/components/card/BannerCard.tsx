@@ -59,8 +59,8 @@ interface IBannerCard {
 const BannerCard = ({ variant }: IBannerCard) =>
   variant == "defautl-our-career" ? (
     <>
-      <div className="relative overflow-hidden  w-full p-10 py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="relative overflow-hidden  w-full p-10 py-10">
+        <article className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {careerCardData?.map((cardData) => (
             <div
               className="
@@ -84,13 +84,13 @@ const BannerCard = ({ variant }: IBannerCard) =>
               <p className="max-w-sm py-4">{cardData.slug}</p>
             </div>
           ))}
-        </div>
-      </div>
+        </article>
+      </section>
     </>
   ) : variant == "defautl-career" ? (
     <>
-      <div className="relative overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="relative overflow-hidden">
+        <article className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {careerData?.map((cardData) => (
             <div
               className="flex flex-col justify-center rounded-2xl"
@@ -105,13 +105,13 @@ const BannerCard = ({ variant }: IBannerCard) =>
               />
             </div>
           ))}
-        </div>
-      </div>
+        </article>
+      </section>
     </>
   ) : variant == "defautl-our-contact" ? (
     <>
-      <div className="relative overflow-hidden  w-full p-10 py-60">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <section className="relative overflow-hidden  w-full p-10 py-60">
+        <article className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {ourContacts?.map((cardData) => (
             <div
               className="
@@ -136,12 +136,12 @@ const BannerCard = ({ variant }: IBannerCard) =>
               <p className="max-w-sm py-4">{cardData.slug}</p>
             </div>
           ))}
-        </div>
-      </div>
+        </article>
+      </section>
     </>
   ) : variant == "defautl-contact" ? (
     <>
-      <div className="bg-white relative overflow-hidden z-20 rounded-2xl p-10 ">
+      <section className="bg-white relative overflow-hidden z-20 rounded-2xl p-10 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <Image
             src="/assets/images/contact/listen.webp"
@@ -152,11 +152,11 @@ const BannerCard = ({ variant }: IBannerCard) =>
           />
           <ContactUsForm />
         </div>
-      </div>
+      </section>
     </>
   ) : variant == "default-our-values" ? (
     <>
-      <div
+      <section
         className="
       bg-productHives-ProductOwner
       relative
@@ -199,7 +199,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
               );
             })}
           </div>
-          <div className="flex py-2">
+          <summary className="flex py-2">
             {ourValueData?.slice(4, 6).map((list) => {
               return (
                 <div
@@ -213,10 +213,10 @@ const BannerCard = ({ variant }: IBannerCard) =>
                 </div>
               );
             })}
-          </div>
+          </summary>
         </div>
         {/* cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-4">
+        <article className="grid grid-cols-1 md:grid-cols-3 gap-10 py-4">
           {ourStoryCardData?.map((cardData) => (
             <div
               className="flex flex-col justify-center bg-productHives-mainBackground p-10 rounded-2xl text-white"
@@ -234,12 +234,12 @@ const BannerCard = ({ variant }: IBannerCard) =>
               <p className="max-w-sm py-2 pb-5">{cardData.slug}</p>
             </div>
           ))}
-        </div>
-      </div>
+        </article>
+      </section>
     </>
   ) : variant == "defautl-service" ? (
     <>
-      <div className="bg-white relative overflow-hidden z-20  rounded-2xl p-10">
+      <section className="bg-white relative overflow-hidden z-20  rounded-2xl p-10">
         <div className="absolute -top-1 right-1 -z-10">
           <Image
             height={200}
@@ -253,7 +253,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
           Building trust on our key features
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
+        <article className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
           {dataBanner?.map((cardData) => (
             <div className="flex flex-col justify-center" key={cardData.id}>
               <Image
@@ -268,12 +268,12 @@ const BannerCard = ({ variant }: IBannerCard) =>
               <p className="max-w-sm py-1">{cardData.slug}</p>
             </div>
           ))}
-        </div>
-      </div>
+        </article>
+      </section>
     </>
   ) : variant == "defautl-service-process" ? (
     <>
-      <div className="text-white relative overflow-hidden z-20  rounded-2xl w-full p-10">
+      <section className="text-white relative overflow-hidden z-20  rounded-2xl w-full p-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-10">
           {dataBannerProcess?.map((cardData) => (
             <div
@@ -293,11 +293,11 @@ const BannerCard = ({ variant }: IBannerCard) =>
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </>
   ) : variant == "default-home" ? (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 rounded-2xl items-center p-20 border bg-white">
+      <section className="grid grid-cols-1 lg:grid-cols-2 lg:gap-10 gap-4 rounded-2xl items-center py-32 p-20 border bg-white">
         <p className="text-xl lg:text-5xl font-semibold max-w-screen-lg">
           Building trust on our key features
         </p>
@@ -308,11 +308,11 @@ const BannerCard = ({ variant }: IBannerCard) =>
           and user research. With ProductHive, you can validate your idea and
           boost your chances of successful product launch.
         </p>
-      </div>
+      </section>
     </>
   ) : variant === "defautl-about" ? (
     <>
-      <div className="overflow-hidden z-20 relative grid grid-cols-1  lg:gap-10 gap-4 rounded-2xl items-center p-10 border bg-white text-productHives-mainBackground">
+      <section className="overflow-hidden z-20 relative grid grid-cols-1 lg:gap-50 gap-4 rounded-2xl items-center p-10 border bg-white text-productHives-mainBackground">
         <h1 className=" z-20 text-xl lg:text-5xl font-semibold max-w-screen-xl text-center ">
           Grow your business by 2X using our consultation service
         </h1>
@@ -326,7 +326,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
           />
         </div>
         <div className="flex flex-col justify-center items-center z-20">
-          <div className="flex py-4">
+          <article className="flex py-4">
             {aboutCardData?.slice(0, 3).map((aboutCard) => {
               return (
                 <div
@@ -340,8 +340,8 @@ const BannerCard = ({ variant }: IBannerCard) =>
                 </div>
               );
             })}
-          </div>
-          <div className="flex py-4">
+          </article>
+          <summary className="flex py-4">
             {aboutCardData?.slice(3, 6).map((aboutCard) => {
               return (
                 <div
@@ -355,9 +355,9 @@ const BannerCard = ({ variant }: IBannerCard) =>
                 </div>
               );
             })}
-          </div>
+          </summary>
         </div>
-      </div>
+      </section>
     </>
   ) : null;
 
