@@ -42,10 +42,10 @@ const MainBanner = ({ variant }: IMainBainner) =>
   ) : variant === "career" ? (
     <>
       <section className="bg-productHives-mainBackground   ">
-        <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
+        <div className="max-w-screen-2xl mx-auto px-10 relative pb-10 mb-40 flex flex-col">
           <PageBanner variant="career" />
           <div className="absolute -bottom-96 ">
-            <BannerCard variant="defautl-career" />
+            <BannerCard variant="default-career" />
           </div>
         </div>
       </section>
@@ -56,7 +56,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40">
           <PageBanner variant="contact" />
           <div className="absolute -bottom-96 ">
-            <BannerCard variant="defautl-contact" />
+            <BannerCard variant="default-contact" />
           </div>
         </div>
       </section>
@@ -67,7 +67,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
         <div className="max-w-screen-2xl mx-auto px-10 relative ">
           <PageBanner variant="service" />
           <div className="absolute -bottom-72">
-            <BannerCard variant="defautl-service" />
+            <BannerCard variant="default-service" />
           </div>
         </div>
       </section>
@@ -77,7 +77,7 @@ const MainBanner = ({ variant }: IMainBainner) =>
       <div className="max-w-screen-2xl mx-auto px-4 relative ">
         <PageBanner variant="about" />
         <div className="absolute -bottom-72 w-full">
-          <BannerCard variant="defautl-about" />
+          <BannerCard variant="default-about" />
         </div>
       </div>
     </section>

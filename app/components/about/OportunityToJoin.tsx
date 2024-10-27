@@ -15,7 +15,7 @@ const listOpportunity: IopportunityData[] = opportunityData;
 const OportunityToJoin = () => {
   return (
     <>
-      <div className="bg-productHives-colorGrey">
+      <section className="bg-productHives-colorGrey">
         <div className="mx-auto px-10 max-w-screen-2xl py-10">
           <div className="flex flex-col">
             <div>
@@ -58,10 +58,10 @@ const OportunityToJoin = () => {
             </div>
           </div>
         </div>
-        <div className="bg-productHives-mainBackground py-10">
+        <div className="bg-productHives-mainBackground py-10 my-60">
           <Revenue topCardShow="show" />
         </div>
-      </div>
+      </section>
     </>
   );
 };

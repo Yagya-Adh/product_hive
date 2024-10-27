@@ -45,19 +45,19 @@ const ourValueData: IourValueData[] = ourValuesData;
 interface IBannerCard {
   variant?:
     | string
-    | "defautl-service"
+    | "default-service"
     | "default-home"
-    | "defautl-about"
+    | "default-about"
     | "default-service-process"
     | "default-our-values"
-    | "defautl-contact"
+    | "default-contact"
     | "default-our-contact"
     | "default-career"
-    | "defautl-our-career";
+    | "default-our-career";
 }
 
 const BannerCard = ({ variant }: IBannerCard) =>
-  variant == "defautl-our-career" ? (
+  variant == "default-our-career" ? (
     <>
       <section className="relative overflow-hidden  w-full p-10 py-10">
         <article className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -87,10 +87,10 @@ const BannerCard = ({ variant }: IBannerCard) =>
         </article>
       </section>
     </>
-  ) : variant == "defautl-career" ? (
+  ) : variant == "default-career" ? (
     <>
       <section className="relative overflow-hidden">
-        <article className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <article className="grid grid-cols-1 md:grid-cols-3 gap-10 my-10">
           {careerData?.map((cardData) => (
             <div
               className="flex flex-col justify-center rounded-2xl"
@@ -108,7 +108,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
         </article>
       </section>
     </>
-  ) : variant == "defautl-our-contact" ? (
+  ) : variant == "default-our-contact" ? (
     <>
       <section className="relative overflow-hidden  w-full p-10 py-60">
         <article className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -139,7 +139,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
         </article>
       </section>
     </>
-  ) : variant == "defautl-contact" ? (
+  ) : variant == "default-contact" ? (
     <>
       <section className="bg-white relative overflow-hidden z-20 rounded-2xl p-10 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -237,7 +237,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
         </article>
       </section>
     </>
-  ) : variant == "defautl-service" ? (
+  ) : variant == "default-service" ? (
     <>
       <section className="bg-white relative overflow-hidden z-20  rounded-2xl p-10">
         <div className="absolute -top-1 right-1 -z-10">
@@ -271,7 +271,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
         </article>
       </section>
     </>
-  ) : variant == "defautl-service-process" ? (
+  ) : variant == "default-service-process" ? (
     <>
       <section className="text-white relative overflow-hidden z-20  rounded-2xl w-full p-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 py-10">
@@ -310,7 +310,7 @@ const BannerCard = ({ variant }: IBannerCard) =>
         </p>
       </section>
     </>
-  ) : variant === "defautl-about" ? (
+  ) : variant === "default-about" ? (
     <>
       <section className="overflow-hidden z-20 relative grid grid-cols-1 lg:gap-50 gap-4 rounded-2xl items-center p-10 border bg-white text-productHives-mainBackground">
         <h1 className=" z-20 text-xl lg:text-5xl font-semibold max-w-screen-xl text-center ">
