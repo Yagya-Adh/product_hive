@@ -20,13 +20,13 @@ interface IcartData {
 const cardData: IcartData[] = footerCardData;
 const FooterCard = () => {
   return (
-    <div className="rounded-xl overflow-hidden bg-productHives-lightYellow  relative z-30">
+    <section className="rounded-xl overflow-hidden bg-productHives-lightYellow  relative z-30">
       <div className="flex flex-row">
-        <div className="bg-productHives-buttonColor rounded-full absolute -top-10 -right-10 h-2/3 w-1/2 -z-10"></div>
+        <div className="bg-productHives-buttonColor rounded-full absolute -top-10 -right-10 h-1/2 w-1/2 -z-10"></div>
         {cardData?.map((cardItem) => (
           <div key={cardItem.id} className="relative  pl-10 pt-10">
             <h1 className="text-3xl font-bold">{cardItem.title}</h1>
-            <div className="absolute ">
+            <div className="absolute">
               {cardItem.common?.map((commonList) => (
                 <div
                   className="flex items-center text-xl py-2"
@@ -58,14 +58,14 @@ const FooterCard = () => {
             <Image
               src="/assets/images/footer/talk.webp"
               alt="card_image_"
-              className="z-20"
-              width={120}
-              height={120}
+              className="z-10"
+              width={500}
+              height={500}
             />
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

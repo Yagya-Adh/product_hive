@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Journey to Growth: Sarah's Success",
+    "blogCreate": "May 4, 2024",
+    "describe": "Sarah, a small business owner, improved online presence and sales with our digital strategies.",
+    "path": "/journey-to-growth-sarahs-success",
+    "image": "/assets/images/blog/journeyTo.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Redefining Consultancy in the Digital Age",
+    "blogCreate": "May 4, 2024",
+    "describe": "Explore how consultancy transcends traditional boundaries, shaping strategies, and driving innovation in the digital era.",
+    "path": "/redefining-consultancy-digital-age",
+    "image": "/assets/images/blog/redefine.png"
+  },
+  {
+    "id": 3,
+    "title": "Unlocking Consultancy Success",
+    "blogCreate": "May 4, 2024",
+    "describe": "Explore the essential strategies for maximizing the impact of consultancy partnerships in your organization.",
+    "path": "/unlocking-consultancy-success",
+    "image": "/assets/images/blog/journeyTo.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Navigating Excellence with Consultancy",
+    "blogCreate": "May 4, 2024",
+    "describe": "Explore the essential principles and strategies for leveraging consultancy as a compass to guide your organization towards excellence.",
+    "path": "/navigating-excellence-with-consultancy",
+    "image": "/assets/images/blog/unlocking.webp"
+  },
+  {
+    "id": 5,
+    "title": "Navigating the Consulting Maze",
+    "blogCreate": "May 4, 2024",
+    "describe": "Discover the keys to unlocking successful consultancy outcomes in a complex business landscape.",
+    "path": "/navigating-consulting-maze",
+    "image": "/assets/images/blog/redefine.png"
+  }
+]

@@ -20,6 +20,10 @@ const Revenue = ({ topCardShow }: IRevenue) => {
           highlightText="customers love"
           textColor="white"
           buttonGroup={true}
+          buttonGroupText="Lets Work Together"
+          buttonGroupTextTwo="Book A Call"
+          pathRedirect="/career"
+          pathRedirectOne="/contact"
         />
       </div>
     </div>

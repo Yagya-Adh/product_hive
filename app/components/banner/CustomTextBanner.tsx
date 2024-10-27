@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import ButtonPills from "../button/ButtonPills";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
 
 interface ICustomTextBanner {
   preText?: string;
@@ -15,6 +16,7 @@ interface ICustomTextBanner {
   pathRedirectOne?: string;
   buttonGroupText?: string;
   buttonGroupTextTwo?: string;
+  hasSubscription?: boolean;
 }
 
 const CustomTextBanner = ({
@@ -28,10 +30,11 @@ const CustomTextBanner = ({
   pathRedirectOne,
   buttonGroupText,
   buttonGroupTextTwo,
+  hasSubscription,
 }: ICustomTextBanner) => (
   <>
-    <div className="flex flex-col items-center md:text-center justify-center">
-      <div
+    <section className="flex flex-col items-center md:text-center justify-center">
+      <article
         className={`${
           textColor === "white"
             ? "text-white"
@@ -42,7 +45,15 @@ const CustomTextBanner = ({
             : "text-white"
         } 
 
-      md:max-w-screen-96 s p-10 text-4xl lg:text-6xl md:text-center  font-semibold max-w-screen-xl capitalize`}
+      md:max-w-screen-96
+      p-10 
+      text-4xl 
+      lg:text-6xl 
+      md:text-center  
+      font-semibold 
+      max-w-screen-xl 
+      capitalize
+      `}
       >
         <span
           className={` ${
@@ -71,7 +82,7 @@ const CustomTextBanner = ({
             {postText ? postText : ""}
           </span>
         </p>
-      </div>
+      </article>
       <p className="max-w-screen-sm py-4">{description ? description : ""}</p>
       {buttonGroup && (
         <div className="p-10 flex justify-between items-center text-black">
@@ -90,7 +101,48 @@ const CustomTextBanner = ({
           </Link>
         </div>
       )}
-    </div>
+
+      {hasSubscription && (
+        <>
+          <form
+            className="
+            overflow-hidden
+            relative
+             text-productHives-mainBackground
+            bg-white
+            flex 
+            items-center 
+            rounded-full 
+            my-5 
+            py-1 
+            px-1"
+          >
+            <div className="absolute left-2">
+              <EnvelopeIcon
+                className="
+              size-8 
+              text-productHives-mainBackground"
+              />
+            </div>
+            <input
+              type="text"
+              placeholder="Enter your e-mail"
+              className="
+              py-3
+              px-10
+              text-xl
+              outline-none
+              "
+            />
+            <ButtonPills
+              text="Subscribe Now"
+              variant="button-default"
+              padding="px-1 text-xl"
+            />
+          </form>
+        </>
+      )}
+    </section>
   </>
 );
 

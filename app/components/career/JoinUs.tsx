@@ -1,10 +1,7 @@
 "use client";
-
-import Image, { StaticImageData } from "next/image";
-import talentImage from "@/app/assets/images/career/talent.webp";
+import Image from "next/image";
 import ButtonPills from "../button/ButtonPills";
-import hundredChartImage from "@/app/assets/images/career/hundredChart.svg";
-import groupImage from "@/app/assets/images/career/group.svg";
+
 interface IinnerContent {
   id: number;
   listPoint: string;
@@ -46,20 +43,20 @@ const cardListData: ICardListData[] = [
 const smallCardData = [
   {
     id: 1,
-    image: hundredChartImage,
+    image: "/assets/images/career/hundredChart.svg",
     heading: "100% Remote",
     slug: "At any place in the world",
   },
   {
     id: 2,
-    image: groupImage,
+    image: "/assets/images/career/group.svg",
     heading: "120+",
     slug: "At any place in the world",
   },
 ];
 interface ISmallCard {
   key: number;
-  image: StaticImageData;
+  image: string;
   heading: string;
   slug: string;
 }
@@ -70,7 +67,13 @@ const SmallCard = ({ key, image, heading, slug }: ISmallCard) => {
         className="bg-white rounded-2xl flex flex-col py-7 p-2 text-productHives-mainBackground"
         key={key}
       >
-        <Image src={image} alt="small_card_" className=" size-10" />
+        <Image
+          src={image}
+          alt="small_card_"
+          width={200}
+          height={200}
+          className=" size-10"
+        />
         <h1 className="font-bold text-4xl py-2 max-w-14">{heading}</h1>
         <p className="text-xs py-2">{slug}</p>
       </div>
@@ -93,9 +96,11 @@ const JoinUs = () => {
             ))}{" "}
           </div>
           <Image
-            src={talentImage}
+            src="/assets/images/career/talent.webp"
             alt="join_us_"
             className="rounded-full scale-75 "
+            width={120}
+            height={120}
           />
           <div className="absolute  bottom-10  right-28 z-20">
             {smallCardData?.slice(1, 2).map((list) => (

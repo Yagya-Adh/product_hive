@@ -17,7 +17,7 @@ const config: Config = {
           colorGrey: "#f9f8f3",
           lightYellow: "#efebe0",
           // #efebe0;
-
+          gray: "#333",
           ProductOwner: "#f9f8f3",
           feautrePill: "#90f0c0",
           TextSecondary: "#102c24",

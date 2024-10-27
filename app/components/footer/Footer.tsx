@@ -47,39 +47,33 @@ const routeData: IrouteData[] = [
 
 const Footer = () => {
   return (
-    <div className="bg-productHives-colorGrey">
+    <footer className="bg-productHives-colorGrey">
       <div className="max-w-screen-2xl mx-auto px-10">
-        <FooterGridSection />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center p-10">
+          <FooterSectionOne />
+          <FooterSectionTwo />
+        </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
 export default Footer;
 
-const FooterGridSection = () => {
-  return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center p-10">
-      <FooterSectionOne />
-      <FooterSectionTwo />
-    </div>
-  );
-};
-
 const FooterSectionOne = () => {
   return (
     <>
-      <div className="">
+      <aside>
         <div className="py-2">
           <MainLogo logo="footer" />
         </div>
-        <div className="py-2">
+        <article className="py-2">
           <FooterCard />
-        </div>
+        </article>
         <div className="py-2">
           <ButtonPills text="Buy Template" />
         </div>
-      </div>
+      </aside>
     </>
   );
 };
@@ -87,22 +81,20 @@ const FooterSectionOne = () => {
 const FooterSectionTwo = () => {
   return (
     <>
-      <div className="flex flex-row justify-between">
+      <aside className="flex flex-row justify-between">
         {routeData?.map((listRoute) => (
-          <div className=" flex flex-col text-xl p-1" key={listRoute.id}>
+          <article className=" flex flex-col text-xl p-1" key={listRoute.id}>
             <h1 className="text-2xl font-bold text-productHives-mainBackground">
               {listRoute.head}
             </h1>
             <div className="leading-10 text-productHives-TextSecondary">
               {listRoute.path?.map((item, index) => (
-                <h2 className="" key={index}>
-                  {item}
-                </h2>
+                <h2 key={index}>{item}</h2>
               ))}
             </div>
-          </div>
+          </article>
         ))}
-      </div>
+      </aside>
     </>
   );
 };

@@ -15,7 +15,15 @@ interface IMainBainner {
     | "terms-condition";
 }
 const MainBanner = ({ variant }: IMainBainner) =>
-  variant === "terms-condition" ? (
+  variant === "blog" ? (
+    <>
+      <section className="bg-productHives-mainBackground    relative">
+        <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">
+          <PageBanner variant="blog" />
+        </div>
+      </section>
+    </>
+  ) : variant === "terms-condition" ? (
     <>
       <section className="bg-productHives-mainBackground    relative">
         <div className="max-w-screen-2xl mx-auto px-10 relative pb-40 flex flex-col">

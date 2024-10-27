@@ -72,8 +72,8 @@ const SeeUsInReal = () => {
               src="/assets/images/contact/seeUsInReal.webp"
               alt="see_us_"
               className="rounded-2xl scale-75"
-              height={200}
-              width={200}
+              height={800}
+              width={800}
             />
           </div>
         </div>

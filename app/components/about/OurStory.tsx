@@ -50,7 +50,7 @@ const cardListData: ICardListData[] = [
 
 const OurStory = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-10 py-60">
+    <div className="max-w-screen-2xl mx-auto px-10 my-60">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-20 bg-white py-10">
         <div className="overflow-hidden rounded-2xl bg-productHives-mainBackground">
           <Image

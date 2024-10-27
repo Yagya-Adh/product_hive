@@ -6,6 +6,7 @@ interface IPageBanner {
     | "home"
     | "service"
     | "about"
+    | "blog"
     | "contact"
     | "career"
     | "career-details"
@@ -15,7 +16,16 @@ interface IPageBanner {
 }
 
 const PageBanner = ({ variant }: IPageBanner) =>
-  variant === "terms-condition-footer" ? (
+  variant === "blog" ? (
+    <div className="relative lg:text-center flex flex-col text-white justify-center items-center pt-10 px-10">
+      <CustomTextBanner
+        preText=""
+        highlightText="Our Latest Blogs"
+        description="Ut nihil porro quo galisum quisquam aut reiciendis praesentium id distinctio dolores? Et quasi dolorem et eius excepturi eum dolore fuga hic fugit maxime."
+        hasSubscription={true}
+      />
+    </div>
+  ) : variant === "terms-condition-footer" ? (
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center pt-10 px-10">
       <CustomTextBanner
         buttonGroup={true}
@@ -37,10 +47,12 @@ const PageBanner = ({ variant }: IPageBanner) =>
     <div className="relative lg:text-center flex flex-col text-white justify-center items-center pt-10 px-10">
       <CustomTextBanner
         buttonGroup={true}
-        buttonGroupText="See More Job!"
-        buttonGroupTextTwo="Book A call"
+        buttonGroupText="Contact us"
+        buttonGroupTextTwo="Browse All Services"
         preText="Do not find a role you arel"
         highlightText="looking for?"
+        pathRedirect="/contact-us"
+        pathRedirectOne="/service"
       />
     </div>
   ) : variant === "career-details" ? (
