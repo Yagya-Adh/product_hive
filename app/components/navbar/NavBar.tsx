@@ -30,7 +30,21 @@ const NavBar = () => {
   return (
     <>
       <nav>
-        <div className="z-40 rounded-full bg-productHives-mainBackground   border border-transparent shadow-2xl flex justify-between items-center max-w-screen-2xl p-2 px-4 mx-auto">
+        <div
+          className="
+          z-40
+         rounded-full
+          bg-productHives-mainBackground
+          border border-transparent 
+          shadow-2xl 
+          flex 
+          justify-between 
+          items-center 
+          max-w-screen-2xl 
+          p-2 
+          px-4 
+          mx-auto"
+        >
           <MainLogo logo="nav" />
           <div className="flex justify-between items-center bg-transparent rounded-full">
             <ul className="hidden lg:flex items-center">
