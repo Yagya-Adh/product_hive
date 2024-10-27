@@ -5,10 +5,15 @@ import serviceCardProcessData from "@/serviceCardProccess.json";
 import aboutCardDataList from "@/aboutCardData.json";
 import ourStoryCardData from "@/ourStoryData.json";
 import ourValuesData from "@/ourValuesData.json";
-import listenImage from "@/app/assets/images/contact/listen.webp";
 import ContactUsForm from "../contact/ContactUsForm";
 import ourContacts from "@/ourContactData.json";
 import careerCardData from "@/careerBannerCard.json";
+
+const careerData = [
+  { id: 1, image: "/assets/images/career/one.webp" },
+  { id: 2, image: "/assets/images/career/two.webp" },
+  { id: 3, image: "/assets/images/career/three.webp" },
+];
 
 interface IserviceCardData {
   id: number;
@@ -51,15 +56,6 @@ interface IBannerCard {
     | "defautl-our-career";
 }
 
-import imageOne from "@/app/assets/images/career/one.webp";
-import imageTwo from "@/app/assets/images/career/two.webp";
-import imageThree from "@/app/assets/images/career/three.webp";
-const careerData = [
-  { id: 1, image: imageOne },
-  { id: 2, image: imageTwo },
-  { id: 3, image: imageThree },
-];
-
 const BannerCard = ({ variant }: IBannerCard) =>
   variant == "defautl-our-career" ? (
     <>
@@ -67,7 +63,14 @@ const BannerCard = ({ variant }: IBannerCard) =>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {careerCardData?.map((cardData) => (
             <div
-              className="flex flex-col justify-center text-white bg-productHives-mainBackground rounded-2xl py-5 px-4"
+              className="
+              flex flex-col
+              justify-center
+              text-white 
+              bg-productHives-mainBackground 
+              rounded-2xl 
+              py-5 px-4
+              "
               key={cardData.id}
             >
               <Image
@@ -96,6 +99,8 @@ const BannerCard = ({ variant }: IBannerCard) =>
               <Image
                 src={cardData.image && cardData.image}
                 alt="career_card_"
+                height={400}
+                width={400}
                 className="rounded-2xl scale-90 "
               />
             </div>
@@ -109,7 +114,15 @@ const BannerCard = ({ variant }: IBannerCard) =>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {ourContacts?.map((cardData) => (
             <div
-              className="flex flex-col justify-center text-white bg-productHives-mainBackground rounded-2xl py-5 px-4"
+              className="
+              flex
+              flex-col
+              justify-center
+            text-white
+            bg-productHives-mainBackground
+             rounded-2xl
+             py-5 px-4
+             "
               key={cardData.id}
             >
               <Image
@@ -130,14 +143,31 @@ const BannerCard = ({ variant }: IBannerCard) =>
     <>
       <div className="bg-white relative overflow-hidden z-20 rounded-2xl p-10 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <Image src={listenImage} alt="card_" className="p-1 rounded-2xl" />
+          <Image
+            src="/assets/images/contact/listen.webp"
+            alt="card_"
+            height={400}
+            width={400}
+            className="p-1 rounded-2xl"
+          />
           <ContactUsForm />
         </div>
       </div>
     </>
   ) : variant == "default-our-values" ? (
     <>
-      <div className="bg-productHives-ProductOwner relative overflow-hidden z-20 rounded-2xl w-full py-10 px-10">
+      <div
+        className="
+      bg-productHives-ProductOwner
+      relative
+      overflow-hidden
+      z-20
+      rounded-2xl
+      w-full
+      py-10
+      px-10
+      "
+      >
         {/* title */}
         <h1 className="z-20 text-xl lg:text-5xl font-semibold max-w-screen-xl text-center py-5">
           Our Core Values
@@ -148,7 +178,17 @@ const BannerCard = ({ variant }: IBannerCard) =>
             {ourValueData?.slice(0, 4).map((list) => {
               return (
                 <div
-                  className="mx-2 bg-productHives-buttonColor border border-productHives-mainBackground text-productHives-TextSecondary rounded-full items-center justify-between text-3xl flex px-5 py-1 "
+                  className="
+                  mx-2
+                  bg-productHives-buttonColor
+                  border border-productHives-mainBackground
+                  text-productHives-TextSecondary 
+                  rounded-full
+                  items-center
+                  justify-between
+                  text-3xl
+                  flex
+                  px-5 py-1 "
                   key={list.id}
                 >
                   {/* <span className="text-productHives-buttonColor">
@@ -204,7 +244,6 @@ const BannerCard = ({ variant }: IBannerCard) =>
           <Image
             height={200}
             width={200}
-            className=""
             alt="cardWaterMark_"
             src="https://cdn.prod.website-files.com/661e1bd626e15bec7b70a970/6624c2b4d1360a25b9913be4_bg-element-services-feature.svg"
           />

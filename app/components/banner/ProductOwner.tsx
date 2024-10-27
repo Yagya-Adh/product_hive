@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import productOwnerData from "@/productOwnerData.json";
 
@@ -12,9 +11,9 @@ const ProductOwnerData: IProductOwnerData[] = productOwnerData;
 const ProductOwner = () => {
   return (
     <>
-      <div className="bg-productHives-ProductOwner">
+      <section className="bg-productHives-ProductOwner">
         <div className="max-w-screen-2xl mx-auto py-40 px-10">
-          <div className="flex items-center">
+          <article className="flex items-center">
             <h1 className="text-6xl max-w-screen-xl font-semibold capitalize text-center py-20 px-10 mx-auto">
               Product owner is a key to
               <span className="text-productHives-buttonColor capitalize">
@@ -23,23 +22,27 @@ const ProductOwner = () => {
               </span>
               of your product
             </h1>
-          </div>
-          <div className="grid grid-cols-3 gap-10 py-20">
+          </article>
+          <aside className="grid grid-cols-3 gap-10 py-20">
             {ProductOwnerData?.map((productList) => (
               <div
-                className="flex flex-col items-center rounded-xl bg-productHives-mainBackground p-10"
+                className="flex flex-col justify-between items-center rounded-xl bg-productHives-mainBackground py-10"
                 key={productList.id}
               >
-                <Image src={productList.image} alt="product_" className="" />
+                <Image
+                  src={productList.image}
+                  alt="product_"
+                  width={120}
+                  height={100}
+                  className="object-contain object-center"
+                />
 
-                <h1 className="text-white text-2xl text-center py-5">
-                  {productList.title}
-                </h1>
+                <h1 className="text-white text-2xl ">{productList.title}</h1>
               </div>
             ))}
-          </div>
+          </aside>
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -1,8 +1,6 @@
 "use client";
 import { CheckCircleIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
-import presegemtImage from "@/app/assets/images/presegrment/presegment.webp";
-import dissappointedImages from "@/app/assets/images/presegrment/howdissapinted.webp";
 
 interface ICardArray {
   before?: string;
@@ -71,31 +69,46 @@ const cardListData: ICardListData[] = [
 
 const PreSegment = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-10">
+    <section className="max-w-screen-2xl mx-auto px-10">
       {/* presegement */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-20 bg-white py-10">
-        <div className="overflow-hidden rounded-2xl">
-          <Image src={presegemtImage} className="" alt="presegment_" />
-        </div>
-        <div className="p-10">
+        <aside className="overflow-hidden rounded-2xl relative">
+          <Image
+            src="/assets/images/presegrment/presegment.webp"
+            height={500}
+            width={400}
+            alt="presegment_"
+            className="object-cover object-center  w-full"
+          />
+
+          <div className="absolute bottom-5 right-5">
+            <Image
+              src="/assets/images/presegrment/income.svg"
+              height={250}
+              width={150}
+              alt="presegment_"
+              className="object-cover object-center h-full w-full rounded-xl"
+            />
+          </div>
+        </aside>
+        <aside className="p-10">
           <PresegmentCardList />
-        </div>
+        </aside>
       </div>
       {/* loop in your team */}
       <div className="grid grid-cols-1  md:grid-cols-2 gap-10 bg-white py-10 ">
-        <div className="">
-          <LoopinYourTeam />
-        </div>
+        <LoopinYourTeam />
 
         <div className="bg-productHives-mainBackground overflow-hidden rounded-2xl">
           <Image
-            src={dissappointedImages}
+            src="/assets/images/presegrment/howdissapinted.webp"
             alt="dissappointedImages_"
-            className=""
+            width={500}
+            height={500}
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
@@ -105,7 +118,7 @@ const PresegmentCardList = () => {
   return (
     <>
       {cardListData?.slice(0, 1).map((cardListing) => (
-        <div className="flex flex-col justify-center" key={cardListing.id}>
+        <article className="flex flex-col justify-center" key={cardListing.id}>
           <h1 className="text-xl font-bold ">{cardListing.title}</h1>
           <h2 className="text-5xl font-bold py-4">
             <span className="text-productHives-buttonColor">
@@ -130,7 +143,7 @@ const PresegmentCardList = () => {
               </ul>
             ))}
           </div>
-        </div>
+        </article>
       ))}
     </>
   );
@@ -140,7 +153,7 @@ const LoopinYourTeam = () => {
   return (
     <>
       {cardListData?.slice(1, 2).map((cardListing, index) => (
-        <div className="flex flex-col justify-center" key={index}>
+        <article className="flex flex-col justify-center" key={index}>
           <h1 className="text-xl font-bold ">{cardListing.title}</h1>
           <h2 className="text-5xl font-bold py-4">
             {cardListing.heading.before && cardListing.heading.before}
@@ -165,7 +178,7 @@ const LoopinYourTeam = () => {
               </ul>
             ))}
           </div>
-        </div>
+        </article>
       ))}
     </>
   );

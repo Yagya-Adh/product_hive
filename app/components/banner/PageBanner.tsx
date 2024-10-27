@@ -1,11 +1,5 @@
-"use client";
-
 import Image from "next/image";
-/* /assets/images/home/hero.webp */
 import CustomTextBanner from "./CustomTextBanner";
-
-import clockSVG from "@/app";
-import dropSVG from "@/app";
 
 interface IPageBanner {
   variant:
@@ -59,11 +53,23 @@ const PageBanner = ({ variant }: IPageBanner) =>
 
       <div className="flex items-center py-2">
         <h2 className="flex items-center px-4 mx-4">
-          <Image src="/assets/clock.svg" alt="time_" className="size-10" />
+          <Image
+            src="/assets/clock.svg"
+            alt="time_"
+            width={80}
+            height={80}
+            className="size-10"
+          />
           <span>Full time</span>
         </h2>
         <p className="flex items-center px-4 mx-4">
-          <Image src="/assets/drop.svg" alt="time_" className="size-10" />
+          <Image
+            src="/assets/drop.svg"
+            width={80}
+            height={80}
+            alt="time_"
+            className="size-10"
+          />
           <span>Remote (USA time zones)</span>
         </p>
       </div>
@@ -85,6 +91,8 @@ const PageBanner = ({ variant }: IPageBanner) =>
         <Image
           src="/assets/images/home/hero.webp"
           alt="home_"
+          width={250}
+          height={250}
           className="size-48"
         />
       </div>
@@ -93,6 +101,8 @@ const PageBanner = ({ variant }: IPageBanner) =>
           src="/assets/images/home/heroin.webp"
           alt="home_"
           className="size-48"
+          width={250}
+          height={250}
         />
       </div>
       <CustomTextBanner

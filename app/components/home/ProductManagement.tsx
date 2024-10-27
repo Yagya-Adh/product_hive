@@ -1,15 +1,11 @@
 "use client";
-import clientImage from "@/app/assets/images/productManage/client.webp";
-import effiecientImage from "@/app/assets/images/productManage/efficent.png";
-import reducedImage from "@/app/assets/images/productManage/reduced.png";
-import empowerImage from "@/app/assets/images/productManage/empowered.webp";
 import Image from "next/image";
 
 const productData = [
   {
     id: 1,
     title: "Client Needs Anticipation",
-    image: clientImage,
+    image: "/assets/images/productManage/client.webp",
     description:
       "The Product Owner is an expert at understanding and anticipating the client’s needs to more effectively manage the development process.",
   },
@@ -17,7 +13,7 @@ const productData = [
   {
     id: 2,
     title: "Efficient resource management",
-    image: effiecientImage,
+    image: "/assets/images/productManage/efficent.png",
     description:
       "Our Product Managers respond quickly to new and changing requirements with a clear understanding of the costs.",
   },
@@ -25,7 +21,7 @@ const productData = [
   {
     id: 3,
     title: "Reduced risks",
-    image: reducedImage,
+    image: "/assets/images/productManage/reduced.png",
     description:
       "One of the Product Manager’s tasks is gathering feedback, looking at metrics and delivering value to customers to reduce the risk of product failure.",
   },
@@ -33,7 +29,7 @@ const productData = [
   {
     id: 4,
     title: "Empowered independent decision making",
-    image: empowerImage,
+    image: "/assets/images/productManage/empowered.webp",
     description:
       "Product Managers collaborate with the engineering team to deliver work in time creating an environment that facilitates the decision making process.",
   },
@@ -63,7 +59,13 @@ const ProductManagement = () => {
               className="h-full flex flex-col justify-center md:flex-row md:justify-between lg:grid-cols-2 lg:grid  rounded-2xl gap-10 overflow-hidden items-center p-5 bg-white"
               key={product.id}
             >
-              <Image className="rounded-2xl" alt="" src={product.image} />
+              <Image
+                className="rounded-2xl"
+                alt="product_manager"
+                src={product.image}
+                height={400}
+                width={400}
+              />
               <div>
                 <h1 className="text-productHives-buttonColor font-bold text-xl">
                   {product.title}

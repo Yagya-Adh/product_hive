@@ -2,14 +2,13 @@
 import Image from "next/image";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
-import feautreRequestImage from "@/app/assets/images/feautreRequest/feauterRequestImage.webp";
 
 const FeautreRequest = () => {
   return (
-    <div className="max-w-screen-2xl mx-auto px-10 pt-40 pb-80">
+    <section className="max-w-screen-2xl mx-auto px-10 pt-40 pb-80">
       <FeautreBanner />
       <FeautreBodyGroup />
-    </div>
+    </section>
   );
 };
 
@@ -17,17 +16,23 @@ export default FeautreRequest;
 const FeautreBanner = () => {
   return (
     <div className="grid grid-cols-1 rounded-2xl relative overflow-hidden">
-      <Image src={feautreRequestImage} alt="feautre_" className="" />
-      <div className="absolute bottom-10 left-10">
+      <Image
+        src="/assets/images/feautreRequest/feauterRequestImage.webp"
+        alt="feautre_"
+        width={1600}
+        height={600}
+        className="object-cover w-full"
+      />
+      <aside className="absolute bottom-10 left-10">
         <FeautreRequestCard />
-      </div>
+      </aside>
     </div>
   );
 };
 const FeautreRequestCard = () => {
   return (
     <>
-      <div className="bg-productHives-mainBackground p-5 rounded-xl">
+      <article className="bg-productHives-mainBackground p-5 rounded-xl">
         <div className=" font-bold flex flex-col justify-center items-start">
           <h1 className="bg-productHives-feautrePill rounded-full px-2 py-1">
             Feautre Request
@@ -36,7 +41,7 @@ const FeautreRequestCard = () => {
             I would love to send my data directly to Slack
           </p>
         </div>
-      </div>
+      </article>
     </>
   );
 };

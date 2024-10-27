@@ -64,6 +64,8 @@ const CustomTextBanner = ({
             src="/assets/bannerLine.svg"
             alt="banner_line_"
             className="z-20 size-20 w-1/2 h-full"
+            width={500}
+            height={500}
           />
           <span className={`text-productHives-TextSecondary`}>
             {postText ? postText : ""}

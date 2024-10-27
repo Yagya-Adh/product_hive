@@ -48,6 +48,8 @@ const FooterCard = () => {
                     src={socialList.mean}
                     key={socialList.id}
                     alt="social_"
+                    width={24}
+                    height={24}
                     className="size-7 mx-1"
                   />
                 ))}
